@@ -30,16 +30,17 @@ window.PROGRESS_DATA = {
     { date: "2026-06-30", planned: "休工", actual: "休工", weather: "—", status: "paused" },
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
-  calendar: {
-    "2026-07-01": { label: "中断・再開準備", status: "paused" },
-    "2026-07-02": { label: "中断・再開準備", status: "paused" },
-    "2026-07-03": { label: "中断・再開準備", status: "paused" },
-    "2026-07-04": { label: "中断・再開準備", status: "paused" },
-    "2026-07-05": { label: "中断・再開準備", status: "paused" },
-    "2026-07-06": { label: "中断・再開準備", status: "paused" },
-    "2026-07-07": { label: "中断・再開準備", status: "paused" },
-    "2026-07-08": { label: "中断・移動日", status: "paused" },
-    "2026-07-09": { label: "工事再開・基礎はつり", status: "completed" },
-    "2026-07-10": { label: "基礎はつり", status: "in-progress" }
-  }
+  calendarRanges: [
+    { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
+    { start: "2026-04-23", end: "2026-04-24", label: "足場設置", status: "completed" },
+    { start: "2026-04-25", end: "2026-04-26", label: "休工", status: "paused" },
+    { start: "2026-04-27", end: "2026-04-27", label: "準備工", status: "completed" },
+    { start: "2026-04-28", end: "2026-05-20", label: "下地調整", status: "completed" },
+    { start: "2026-05-21", end: "2026-05-24", label: "休工", status: "paused" },
+    { start: "2026-05-25", end: "2026-06-30", label: "工事中断", status: "paused" },
+    { start: "2026-07-01", end: "2026-07-07", label: "中断・再開準備", status: "paused" },
+    { start: "2026-07-08", end: "2026-07-08", label: "中断・移動日", status: "paused" },
+    { start: "2026-07-09", end: "2026-07-09", label: "工事再開・基礎はつり", status: "completed" },
+    { start: "2026-07-10", end: "2026-07-10", label: "基礎はつり", status: "in-progress" }
+  ]
 };

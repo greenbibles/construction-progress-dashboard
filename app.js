@@ -26,19 +26,40 @@
   });
 
   const calendar = document.getElementById("calendar");
-  const firstDay = new Date("2026-07-01T00:00:00").getDay();
-  const mondayOffset = (firstDay + 6) % 7;
-  for (let i = 0; i < mondayOffset; i++) {
-    const empty = document.createElement("div"); empty.className = "calendar-day empty"; calendar.appendChild(empty);
-  }
-  for (let day = 1; day <= 31; day++) {
-    const key = `2026-07-${String(day).padStart(2,"0")}`;
-    const event = data.calendar[key];
-    const cell = document.createElement("div");
-    cell.className = "calendar-day";
-    cell.innerHTML = `<span class="num">${day}</span>${event ? `<span class="event ${event.status}">${event.label}</span>` : ""}`;
-    calendar.appendChild(cell);
-  }
+  const calendarMonth = document.getElementById("calendar-month");
+  const calendarPrev = document.getElementById("calendar-prev");
+  const calendarNext = document.getElementById("calendar-next");
+  const calendarTitle = document.getElementById("calendar-title");
+  const months = [2, 3, 4, 5, 6].map(month => new Date(2026, month, 1));
+  let selectedMonth = months.length - 1;
+  const dateKey = date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const eventFor = key => data.calendarRanges.slice().reverse().find(range => key >= range.start && key <= range.end);
+  const renderCalendar = () => {
+    const month = months[selectedMonth];
+    const year = month.getFullYear();
+    const monthNumber = month.getMonth() + 1;
+    calendarMonth.textContent = `${year}年${monthNumber}月`;
+    calendarTitle.textContent = `${monthNumber}月の工程カレンダー`;
+    calendarPrev.disabled = selectedMonth === 0;
+    calendarNext.disabled = selectedMonth === months.length - 1;
+    calendar.replaceChildren();
+    const mondayOffset = (month.getDay() + 6) % 7;
+    for (let i = 0; i < mondayOffset; i++) {
+      const empty = document.createElement("div"); empty.className = "calendar-day empty"; calendar.appendChild(empty);
+    }
+    const days = new Date(year, monthNumber, 0).getDate();
+    for (let day = 1; day <= days; day++) {
+      const key = dateKey(new Date(year, monthNumber - 1, day));
+      const event = eventFor(key);
+      const cell = document.createElement("div");
+      cell.className = "calendar-day";
+      cell.innerHTML = `<span class="num">${day}</span>${event ? `<span class="event ${event.status}">${event.label}</span>` : ""}`;
+      calendar.appendChild(cell);
+    }
+  };
+  calendarPrev.addEventListener("click", () => { selectedMonth -= 1; renderCalendar(); });
+  calendarNext.addEventListener("click", () => { selectedMonth += 1; renderCalendar(); });
+  renderCalendar();
 
   const log = document.getElementById("recent-log");
   data.recent.forEach(item => {
@@ -48,4 +69,3 @@
     log.appendChild(el);
   });
 })();
-

@@ -50,7 +50,14 @@
 
     <section class="two-col">
       <div>
-        <div class="section-head compact"><div><p class="eyebrow">JULY 2026</p><h2>今月の動き</h2></div></div>
+        <div class="section-head compact">
+          <div><p class="eyebrow">WORK CALENDAR</p><h2 id="calendar-title">工程カレンダー</h2></div>
+          <div class="calendar-nav" aria-label="表示月の切り替え">
+            <button id="calendar-prev" type="button" aria-label="前月">‹</button>
+            <span id="calendar-month"></span>
+            <button id="calendar-next" type="button" aria-label="次月">›</button>
+          </div>
+        </div>
         <section class="card calendar-card">
           <div class="calendar-week"><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span></div>
           <div id="calendar" class="calendar"></div>
