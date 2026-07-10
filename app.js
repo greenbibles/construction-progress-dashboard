@@ -56,6 +56,10 @@
       cell.innerHTML = `<span class="num">${day}</span>${event ? `<span class="event ${event.status}">${event.label}</span>` : ""}`;
       calendar.appendChild(cell);
     }
+    const trailingCells = (7 - ((mondayOffset + days) % 7)) % 7;
+    for (let i = 0; i < trailingCells; i++) {
+      const empty = document.createElement("div"); empty.className = "calendar-day empty"; calendar.appendChild(empty);
+    }
   };
   calendarPrev.addEventListener("click", () => { selectedMonth -= 1; renderCalendar(); });
   calendarNext.addEventListener("click", () => { selectedMonth += 1; renderCalendar(); });
