@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>工事進捗ダッシュボード</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">灯</div>
+    <div>
+      <p class="eyebrow">CONSTRUCTION PROGRESS</p>
+      <h1 id="project-name">工事進捗ダッシュボード</h1>
+    </div>
+    <div class="as-of"><span>基準日</span><strong id="as-of"></strong></div>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">CURRENT STATUS</p>
+        <div class="status-line"><span class="pulse"></span><strong id="project-status"></strong></div>
+        <h2 id="current-phase"></h2>
+        <p class="hero-copy">週報の実績記録をもとに、着工から現在までの工程を整理しています。</p>
+      </div>
+      <div class="status-meter">
+        <span>現在地</span>
+        <strong>基礎工事</strong>
+        <small>2026年7月9日 工事再開</small>
+      </div>
+    </section>
+
+    <section class="summary-grid" aria-label="工事概要">
+      <article class="summary card"><span>実績記録開始</span><strong id="record-start"></strong><small>週報上の最初の実施日</small></article>
+      <article class="summary card"><span>履行期限</span><strong class="pending">確認待ち</strong><small>契約書のローカル保存後に確定</small></article>
+      <article class="summary card"><span>最新実績</span><strong id="last-activity"></strong><small>基礎（はつり）を実施</small></article>
+      <article class="summary card"><span>集計資料</span><strong><span id="source-count"></span>週報</strong><small>基準日までのファイル</small></article>
+    </section>
+
+    <section class="section-head">
+      <div><p class="eyebrow">WORK STREAM</p><h2>工程の流れ</h2></div>
+      <div class="legend"><span class="dot completed"></span>実施済み <span class="dot active"></span>進行中 <span class="dot paused"></span>中断・休工 <span class="dot pending-dot"></span>未着手</div>
+    </section>
+    <section class="card gantt-wrap">
+      <div class="gantt-scale"><span>3月</span><span>4月</span><span>5月</span><span>6月</span><span>7月</span></div>
+      <div id="gantt" class="gantt"></div>
+    </section>
+
+    <section class="two-col">
+      <div>
+        <div class="section-head compact"><div><p class="eyebrow">JULY 2026</p><h2>今月の動き</h2></div></div>
+        <section class="card calendar-card">
+          <div class="calendar-week"><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span></div>
+          <div id="calendar" class="calendar"></div>
+        </section>
+      </div>
+      <div>
+        <div class="section-head compact"><div><p class="eyebrow">LATEST LOG</p><h2>直近の作業</h2></div></div>
+        <section class="card log-card"><div id="recent-log"></div></section>
+      </div>
+    </section>
+
+    <section class="card notice">
+      <div class="notice-icon">!</div>
+      <div><strong>確認待ち事項</strong><p id="data-note"></p></div>
+    </section>
+  </main>
+
+  <footer><span>工事進捗ダッシュボード・ローカル確認版</span><span>原本非改変 / 個人情報非表示</span></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
