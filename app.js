@@ -6,6 +6,7 @@
   document.getElementById("project-status").textContent = data.project.status;
   document.getElementById("current-phase").textContent = data.project.currentPhase;
   document.getElementById("record-start").textContent = fmt(data.project.recordStart);
+  document.getElementById("contract-end").textContent = fmt(data.project.contractEnd);
   document.getElementById("last-activity").textContent = fmt(data.project.lastActivity);
   document.getElementById("source-count").textContent = data.project.sourceFiles;
   document.getElementById("data-note").textContent = data.project.note;

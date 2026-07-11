@@ -2,14 +2,14 @@ window.PROGRESS_DATA = {
   project: {
     name: "新潟港東区西防波堤灯台改良改修工事",
     contractStart: null,
-    contractEnd: null,
+    contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
     asOf: "2026-07-10",
     lastActivity: "2026-07-10",
     status: "7月9日 工事再開・施工中",
     currentPhase: "基礎（はつり）",
     sourceFiles: 19,
-    note: "契約書・施工計画書はDropbox上で未ダウンロードのため、履行期限と契約上の進捗率は確認待ちです。"
+    note: "履行期限は2026年9月30日です。施工計画書がDropbox上で未ダウンロードのため、基準工程と契約上の進捗率は確認待ちです。"
   },
   phases: [
     { id: "preparation", name: "準備工", start: "2026-03-25", end: "2026-04-27", status: "completed", label: "実施済み", summary: "着工準備、関係機関への説明等" },
