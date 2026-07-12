@@ -34,28 +34,71 @@
     gantt.appendChild(row);
   });
 
+  const galleryItems = data.gallery || [];
   const gallery = document.getElementById("gallery");
+  const galleryMain = document.getElementById("gallery-main");
+  const galleryMainImage = document.getElementById("gallery-main-image");
+  const galleryCounter = document.getElementById("gallery-counter");
+  const galleryDate = document.getElementById("gallery-date");
+  const galleryPhase = document.getElementById("gallery-phase");
+  const galleryTitle = document.getElementById("gallery-title");
+  const galleryDescription = document.getElementById("gallery-description");
+  const galleryTabs = document.getElementById("gallery-tabs");
+  const galleryPrev = document.getElementById("gallery-prev");
+  const galleryNext = document.getElementById("gallery-next");
   const dialog = document.getElementById("gallery-dialog");
   const dialogImage = document.getElementById("dialog-image");
   const dialogDate = document.getElementById("dialog-date");
   const dialogPhase = document.getElementById("dialog-phase");
   const dialogTitle = document.getElementById("dialog-title");
   const dialogDescription = document.getElementById("dialog-description");
-  (data.gallery || []).forEach((item, index) => {
-    const article = document.createElement("article");
-    article.className = `gallery-card${index === 0 ? " featured" : ""}`;
-    article.innerHTML = `<button class="gallery-open" type="button" aria-label="${item.title}の写真を拡大表示"><span class="gallery-image"><img src="${item.image}" alt="${item.alt}" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">拡大</span></span><span class="gallery-copy"><span class="gallery-meta"><time>${fmt(item.date)}</time><span>${item.phase}</span></span><strong>${item.title}</strong><small>${item.description}</small></span></button>`;
-    article.querySelector("button").addEventListener("click", () => {
-      dialogImage.src = item.image;
-      dialogImage.alt = item.alt;
-      dialogDate.textContent = fmt(item.date);
-      dialogPhase.textContent = item.phase;
-      dialogTitle.textContent = item.title;
-      dialogDescription.textContent = item.description;
-      dialog.showModal();
+  let selectedPhoto = 0;
+  const openPhoto = item => {
+    dialogImage.src = item.image;
+    dialogImage.alt = item.alt;
+    dialogDate.textContent = fmt(item.date);
+    dialogPhase.textContent = item.phase;
+    dialogTitle.textContent = item.title;
+    dialogDescription.textContent = item.description;
+    dialog.showModal();
+  };
+  const selectPhoto = index => {
+    selectedPhoto = (index + galleryItems.length) % galleryItems.length;
+    const item = galleryItems[selectedPhoto];
+    galleryMainImage.src = item.image;
+    galleryMainImage.alt = item.alt;
+    galleryCounter.textContent = `${String(selectedPhoto + 1).padStart(2, "0")} / ${String(galleryItems.length).padStart(2, "0")}`;
+    galleryDate.textContent = fmt(item.date);
+    galleryPhase.textContent = item.phase;
+    galleryTitle.textContent = item.title;
+    galleryDescription.textContent = item.description;
+    galleryMain.setAttribute("aria-label", `${item.title}の写真を拡大表示`);
+    galleryTabs.querySelectorAll("button").forEach((button, buttonIndex) => {
+      const active = buttonIndex === selectedPhoto;
+      button.setAttribute("aria-selected", String(active));
+      button.tabIndex = active ? 0 : -1;
     });
-    gallery.appendChild(article);
+  };
+  galleryItems.forEach((item, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "photo-tab";
+    button.setAttribute("role", "tab");
+    button.setAttribute("aria-label", `${fmt(item.date)} ${item.title}`);
+    button.innerHTML = `<img src="${item.image}" alt="" loading="lazy" decoding="async"><span><time>${item.date.slice(5).replace("-", "/")}</time><strong>${item.title}</strong></span>`;
+    button.addEventListener("click", () => selectPhoto(index));
+    galleryTabs.appendChild(button);
   });
+  if (galleryItems.length) {
+    selectPhoto(0);
+    galleryMain.addEventListener("click", () => openPhoto(galleryItems[selectedPhoto]));
+    galleryPrev.addEventListener("click", () => selectPhoto(selectedPhoto - 1));
+    galleryNext.addEventListener("click", () => selectPhoto(selectedPhoto + 1));
+    gallery.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft") { event.preventDefault(); selectPhoto(selectedPhoto - 1); }
+      if (event.key === "ArrowRight") { event.preventDefault(); selectPhoto(selectedPhoto + 1); }
+    });
+  }
   document.getElementById("dialog-close").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", event => {
     if (event.target === dialog) dialog.close();
