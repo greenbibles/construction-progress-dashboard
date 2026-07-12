@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-07-11",
     lastActivity: "2026-07-11",
-    updatedAt: "2026-07-12T12:24:00+09:00",
+    updatedAt: "2026-07-12T12:36:00+09:00",
     status: "7月9日 工事再開・施工中",
     currentPhase: "基礎（はつり）",
     sourceFiles: 20,
@@ -44,7 +44,7 @@ window.PROGRESS_DATA = {
     { date: "2026-07-19", work: "休工", note: "週報予定" }
   ],
   gallery: [
-    { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台周辺と施工箇所の状況を記録しました。", image: "gallery/2026-03-30-before.jpg", alt: "着工前の灯台周辺と防波堤の現況" },
+    { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
     { date: "2026-04-20", phase: "準備工", title: "資機材の搬入", description: "足場材などの資機材を現地へ搬入し、施工準備を進めました。", image: "gallery/2026-04-20-materials.jpg", alt: "灯台脇に搬入された足場用資材" },
     { date: "2026-04-23", phase: "仮設工事", title: "足場の設置", description: "灯台鉄部の作業を安全に行うため、作業用足場を設置しました。", image: "gallery/2026-04-23-scaffold.jpg", alt: "灯台鉄部の周囲に設置された作業用足場" },
     { date: "2026-04-24", phase: "下地調整", title: "塗装面のケレン", description: "既存塗膜や錆を除去する下地調整作業に着手しました。", image: "gallery/2026-04-24-preparation.jpg", alt: "足場を設置した灯台で行う下地調整作業" },
