@@ -9,7 +9,6 @@
   document.getElementById("contract-end").textContent = fmt(data.project.contractEnd);
   document.getElementById("last-activity").textContent = fmt(data.project.lastActivity);
   document.getElementById("source-count").textContent = data.project.sourceFiles;
-  document.getElementById("data-note").textContent = data.project.note;
   document.getElementById("updated-at").textContent = new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt));
 
   const chartStart = new Date("2026-03-01T00:00:00");
