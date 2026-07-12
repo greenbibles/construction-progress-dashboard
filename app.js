@@ -10,6 +10,7 @@
   document.getElementById("last-activity").textContent = fmt(data.project.lastActivity);
   document.getElementById("source-count").textContent = data.project.sourceFiles;
   document.getElementById("data-note").textContent = data.project.note;
+  document.getElementById("updated-at").textContent = new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt));
 
   const chartStart = new Date("2026-03-01T00:00:00");
   const chartEnd = new Date("2026-07-31T00:00:00");
@@ -72,5 +73,13 @@
     el.className = "log-item";
     el.innerHTML = `<div class="log-date">${item.date.slice(5).replace("-","/")}</div><div class="log-pin ${item.status}"></div><div class="log-body"><strong>${item.actual || "記録なし"}</strong><small>予定：${item.planned || "—"} / 天候：${item.weather}</small></div>`;
     log.appendChild(el);
+  });
+
+  const upcoming = document.getElementById("upcoming-log");
+  data.upcoming.forEach(item => {
+    const el = document.createElement("div");
+    el.className = "upcoming-item";
+    el.innerHTML = `<div class="upcoming-date">${item.date.slice(5).replace("-","/")}</div><div><strong>${item.work}</strong><small>${item.note}</small></div>`;
+    upcoming.appendChild(el);
   });
 })();
