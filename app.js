@@ -155,6 +155,23 @@
     log.appendChild(el);
   });
 
+  const calendarCard = document.querySelector(".calendar-card");
+  const logCard = document.querySelector(".log-card");
+  const syncRecentLogHeight = () => {
+    if (!calendarCard || !logCard) return;
+    if (window.matchMedia("(min-width: 851px)").matches) {
+      logCard.style.setProperty("height", `${Math.round(calendarCard.getBoundingClientRect().height)}px`, "important");
+    } else {
+      logCard.style.removeProperty("height");
+    }
+  };
+  syncRecentLogHeight();
+  if ("ResizeObserver" in window && calendarCard) {
+    const recentLogHeightObserver = new ResizeObserver(syncRecentLogHeight);
+    recentLogHeightObserver.observe(calendarCard);
+  }
+  window.addEventListener("resize", syncRecentLogHeight);
+
   const upcoming = document.getElementById("upcoming-log");
   (data.upcoming || []).forEach(item => {
     const el = document.createElement("div");
