@@ -48,6 +48,12 @@
       <div id="gantt" class="gantt"></div>
     </section>
 
+    <section class="section-head gallery-head">
+      <div><p class="eyebrow">PHOTO JOURNAL</p><h2>写真で見る工事の記録</h2></div>
+      <p class="gallery-lead">要所となる作業を、着工から時系列で紹介します。</p>
+    </section>
+    <section id="gallery" class="gallery-grid" aria-label="工事写真ギャラリー"></section>
+
     <section class="two-col">
       <div>
         <div class="section-head compact">
@@ -80,6 +86,16 @@
       <div><strong>確認待ち事項</strong><p id="data-note"></p></div>
     </section>
   </main>
+
+  <dialog id="gallery-dialog" class="gallery-dialog" aria-labelledby="dialog-title">
+    <button id="dialog-close" class="dialog-close" type="button" aria-label="拡大写真を閉じる">×</button>
+    <img id="dialog-image" src="" alt="">
+    <div class="dialog-caption">
+      <p><time id="dialog-date"></time><span id="dialog-phase"></span></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+    </div>
+  </dialog>
 
   <footer><span>工事進捗ダッシュボード・ローカル確認版</span><span>原本非改変 / 個人情報非表示</span><span>最終更新：<time id="updated-at"></time></span></footer>
   <script src="data.js"></script>
