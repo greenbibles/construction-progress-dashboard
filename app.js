@@ -87,6 +87,9 @@
     button.setAttribute("aria-label", `${fmt(item.date)} ${item.title}`);
     button.innerHTML = `<img src="${item.image}" alt="" loading="lazy" decoding="async"><span><time>${item.date.slice(5).replace("-", "/")}</time><strong>${item.title}</strong></span>`;
     button.addEventListener("click", () => selectPhoto(index));
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      button.addEventListener("pointerenter", () => selectPhoto(index));
+    }
     galleryTabs.appendChild(button);
   });
   if (galleryItems.length) {
