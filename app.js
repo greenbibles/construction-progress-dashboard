@@ -1,6 +1,10 @@
 (() => {
   const data = window.PROGRESS_DATA;
   const fmt = iso => new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric" }).format(new Date(`${iso}T00:00:00`));
+  const fmtShortWithWeekday = iso => {
+    const weekday = new Intl.DateTimeFormat("ja-JP", { weekday:"short", timeZone:"Asia/Tokyo" }).format(new Date(`${iso}T00:00:00+09:00`));
+    return `${iso.slice(5).replace("-", "/")}（${weekday}）`;
+  };
   const setText = (id, value) => {
     const element = document.getElementById(id);
     if (element) element.textContent = value;
@@ -101,7 +105,7 @@
   data.recent.forEach(item => {
     const el = document.createElement("div");
     el.className = "log-item";
-    el.innerHTML = `<div class="log-date">${item.date.slice(5).replace("-","/")}</div><div class="log-pin ${item.status}"></div><div class="log-body"><strong>${item.actual || "記録なし"}</strong><small>予定：${item.planned || "—"} / 天候：${item.weather}</small></div>`;
+    el.innerHTML = `<div class="log-date">${fmtShortWithWeekday(item.date)}</div><div class="log-pin ${item.status}"></div><div class="log-body"><strong>${item.actual || "記録なし"}</strong><small>予定：${item.planned || "—"} / 天候：${item.weather}</small></div>`;
     log.appendChild(el);
   });
 
@@ -109,7 +113,7 @@
   (data.upcoming || []).forEach(item => {
     const el = document.createElement("div");
     el.className = "upcoming-item";
-    el.innerHTML = `<div class="upcoming-date">${item.date.slice(5).replace("-","/")}</div><div><strong>${item.work}</strong><small>${item.note}</small></div>`;
+    el.innerHTML = `<div class="upcoming-date">${fmtShortWithWeekday(item.date)}</div><div><strong>${item.work}</strong><small>${item.note}</small></div>`;
     upcoming.appendChild(el);
   });
 })();
