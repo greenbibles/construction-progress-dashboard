@@ -1,15 +1,19 @@
 (() => {
   const data = window.PROGRESS_DATA;
   const fmt = iso => new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric" }).format(new Date(`${iso}T00:00:00`));
-  document.getElementById("project-name").textContent = data.project.name;
-  document.getElementById("as-of").textContent = fmt(data.project.asOf);
-  document.getElementById("project-status").textContent = data.project.status;
-  document.getElementById("current-phase").textContent = data.project.currentPhase;
-  document.getElementById("record-start").textContent = fmt(data.project.recordStart);
-  document.getElementById("contract-end").textContent = fmt(data.project.contractEnd);
-  document.getElementById("last-activity").textContent = fmt(data.project.lastActivity);
-  document.getElementById("source-count").textContent = data.project.sourceFiles;
-  document.getElementById("updated-at").textContent = new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt));
+  const setText = (id, value) => {
+    const element = document.getElementById(id);
+    if (element) element.textContent = value;
+  };
+  setText("project-name", data.project.name);
+  setText("as-of", fmt(data.project.asOf));
+  setText("project-status", data.project.status);
+  setText("current-phase", data.project.currentPhase);
+  setText("record-start", fmt(data.project.recordStart));
+  setText("contract-end", fmt(data.project.contractEnd));
+  setText("last-activity", fmt(data.project.lastActivity));
+  setText("source-count", data.project.sourceFiles);
+  setText("updated-at", new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt)));
 
   const chartStart = new Date("2026-03-01T00:00:00");
   const chartEnd = new Date("2026-07-31T00:00:00");
@@ -33,7 +37,7 @@
   const dialogPhase = document.getElementById("dialog-phase");
   const dialogTitle = document.getElementById("dialog-title");
   const dialogDescription = document.getElementById("dialog-description");
-  data.gallery.forEach((item, index) => {
+  (data.gallery || []).forEach((item, index) => {
     const article = document.createElement("article");
     article.className = `gallery-card${index === 0 ? " featured" : ""}`;
     article.innerHTML = `<button class="gallery-open" type="button" aria-label="${item.title}の写真を拡大表示"><span class="gallery-image"><img src="${item.image}" alt="${item.alt}" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">拡大</span></span><span class="gallery-copy"><span class="gallery-meta"><time>${fmt(item.date)}</time><span>${item.phase}</span></span><strong>${item.title}</strong><small>${item.description}</small></span></button>`;
@@ -102,7 +106,7 @@
   });
 
   const upcoming = document.getElementById("upcoming-log");
-  data.upcoming.forEach(item => {
+  (data.upcoming || []).forEach(item => {
     const el = document.createElement("div");
     el.className = "upcoming-item";
     el.innerHTML = `<div class="upcoming-date">${item.date.slice(5).replace("-","/")}</div><div><strong>${item.work}</strong><small>${item.note}</small></div>`;
