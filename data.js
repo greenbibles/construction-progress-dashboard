@@ -4,13 +4,13 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-07-11",
-    lastActivity: "2026-07-11",
-    updatedAt: "2026-07-12T12:36:00+09:00",
-    status: "7月9日 工事再開・施工中",
+    asOf: "2026-07-13",
+    lastActivity: "2026-07-13",
+    updatedAt: "2026-07-13T19:30:00+09:00",
+    status: "7月13日 雨天休工・基礎工を継続予定",
     currentPhase: "基礎（はつり）",
-    sourceFiles: 20,
-    note: "履行期限は2026年9月30日です。施工計画書がDropbox上で未ダウンロードのため、基準工程と契約上の進捗率は確認待ちです。7月12日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    sourceFiles: 21,
+    note: "履行期限は2026年9月30日です。施工計画書がDropbox上で未ダウンロードのため、基準工程と契約上の進捗率は確認待ちです。7月14日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   phases: [
     { id: "preparation", name: "準備工", start: "2026-03-25", end: "2026-04-27", status: "completed", label: "実施済み", summary: "着工準備、関係機関への説明等" },
@@ -20,9 +20,11 @@ window.PROGRESS_DATA = {
     { id: "pause", name: "工事中断", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断", summary: "5月25日から7月8日まで中断。7月1日以降は再開準備を実施" },
     { id: "restart", name: "工事再開準備", start: "2026-07-01", end: "2026-07-08", status: "completed", label: "再開準備", summary: "中断期間中に再開準備および移動を実施" },
     { id: "foundation", name: "基礎（はつり）", start: "2026-07-09", end: "2026-07-11", status: "in-progress", label: "進行中", summary: "7月9日着手、7月11日まで実施を確認" },
-    { id: "foundation-plan", name: "基礎工（予定）", start: "2026-07-12", end: "2026-07-18", status: "planned", label: "予定", summary: "週報予定：はつり、鉄筋・型枠。7月13日は雨予報による休工予定" }
+    { id: "rain-holiday", name: "雨天休工", start: "2026-07-13", end: "2026-07-13", status: "paused", label: "実施済み", summary: "雨天のため休工を実施" },
+    { id: "foundation-plan", name: "基礎工（予定）", start: "2026-07-14", end: "2026-07-18", status: "planned", label: "予定", summary: "週報予定：はつり、鉄筋・型枠" }
   ],
   recent: [
+    { date: "2026-07-13", planned: "休工（雨予報の為）", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-07-11", planned: "基礎（はつり・鉄筋・型枠組立）", actual: "基礎（はつり）", weather: "曇り", status: "completed" },
     { date: "2026-07-10", planned: "基礎（はつり・鉄筋・型枠組立）", actual: "基礎（はつり）", weather: "晴れ", status: "in-progress" },
     { date: "2026-07-09", planned: "基礎（はつり）", actual: "基礎（はつり）", weather: "晴れ", status: "completed" },
@@ -34,8 +36,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-07-12", work: "基礎（はつり・鉄筋・型枠組立）", note: "週報予定" },
-    { date: "2026-07-13", work: "休工", note: "雨予報のため" },
     { date: "2026-07-14", work: "基礎（はつり）", note: "週報予定" },
     { date: "2026-07-15", work: "基礎（鉄筋・型枠）", note: "週報予定" },
     { date: "2026-07-16", work: "基礎（鉄筋・型枠）", note: "週報予定" },
@@ -64,8 +64,8 @@ window.PROGRESS_DATA = {
     { start: "2026-07-08", end: "2026-07-08", label: "中断・移動日", status: "paused" },
     { start: "2026-07-09", end: "2026-07-09", label: "工事再開・基礎はつり", status: "completed" },
     { start: "2026-07-10", end: "2026-07-11", label: "基礎はつり", status: "in-progress" },
-    { start: "2026-07-12", end: "2026-07-12", label: "基礎工（予定）", status: "planned" },
-    { start: "2026-07-13", end: "2026-07-13", label: "休工（予定）", status: "planned" },
+    { start: "2026-07-12", end: "2026-07-12", label: "実施確認待ち", status: "planned" },
+    { start: "2026-07-13", end: "2026-07-13", label: "雨天休工", status: "paused" },
     { start: "2026-07-14", end: "2026-07-14", label: "はつり（予定）", status: "planned" },
     { start: "2026-07-15", end: "2026-07-18", label: "鉄筋・型枠（予定）", status: "planned" },
     { start: "2026-07-19", end: "2026-07-19", label: "休工（予定）", status: "planned" }
