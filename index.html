@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>工事進捗ダッシュボード</title>
-  <link rel="stylesheet" href="style.css?v=20260713-1930">
+  <link rel="stylesheet" href="style.css?v=20260713-1940">
+  <link rel="stylesheet" href="weather-link.css?v=20260713-1940">
 </head>
 <body>
   <header class="topbar">
@@ -24,6 +25,7 @@
         <div class="status-line"><span class="pulse"></span><strong id="project-status"></strong></div>
         <h2 id="current-phase"></h2>
         <p class="hero-copy">週報の実績記録をもとに、着工から現在までの工程を整理しています。</p>
+        <a class="weather-link" href="https://www.jma.go.jp/bosai/nowc/" target="_blank" rel="noopener noreferrer">雨雲レーダー（ナウキャスト）を開く <span aria-hidden="true">↗</span></a>
       </div>
       <div class="status-meter">
         <span>現在地</span>
@@ -35,7 +37,7 @@
     <section class="summary-grid" aria-label="工事概要">
       <article class="summary card"><span>実績記録開始</span><strong id="record-start"></strong><small>週報上の最初の実施日</small></article>
       <article class="summary card"><span>履行期限</span><strong id="contract-end">—</strong><small>令和8年9月30日</small></article>
-      <article class="summary card"><span>最新実績</span><strong id="last-activity"></strong><small>基礎（はつり）を実施</small></article>
+      <article class="summary card"><span>最新実績</span><strong id="last-activity"></strong><small>週報で確認済みの最新実施内容</small></article>
       <article class="summary card"><span>確認資料</span><strong><span id="source-count"></span>週報</strong><small>実績・今後予定の確認ファイル</small></article>
     </section>
 
@@ -111,7 +113,7 @@
   </dialog>
 
   <footer><span>工事進捗ダッシュボード・ローカル確認版</span><span>原本非改変 / 個人情報非表示</span><span>最終更新：<time id="updated-at"></time></span></footer>
-  <script src="data.js?v=20260713-1930"></script>
-  <script src="app.js?v=20260713-1930"></script>
+  <script src="data.js?v=20260713-1940"></script>
+  <script src="app.js?v=20260713-1940"></script>
 </body>
 </html>
