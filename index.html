@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>工事進捗ダッシュボード</title>
-  <link rel="stylesheet" href="style.css?v=20260713-1940">
-  <link rel="stylesheet" href="weather-link.css?v=20260713-1940">
+  <link rel="stylesheet" href="style.css?v=20260714-1139">
+  <link rel="stylesheet" href="weather-link.css?v=20260714-1139">
 </head>
 <body>
   <header class="topbar">
@@ -15,7 +15,10 @@
       <p class="eyebrow">CONSTRUCTION PROGRESS</p>
       <h1 id="project-name">工事進捗ダッシュボード</h1>
     </div>
-    <div class="as-of"><span>基準日</span><strong id="as-of"></strong></div>
+    <div class="header-tools">
+      <div class="as-of"><span>基準日</span><strong id="as-of"></strong></div>
+      <a class="weather-link" href="https://www.jma.go.jp/bosai/nowc/" target="_blank" rel="noopener noreferrer" aria-label="気象庁の雨雲レーダーで今の天気を見る（新しいタブで開きます）">今の天気 <span aria-hidden="true">🌦️</span></a>
+    </div>
   </header>
 
   <main>
@@ -25,7 +28,6 @@
         <div class="status-line"><span class="pulse"></span><strong id="project-status"></strong></div>
         <h2 id="current-phase"></h2>
         <p class="hero-copy">週報の実績記録をもとに、着工から現在までの工程を整理しています。</p>
-        <a class="weather-link" href="https://www.jma.go.jp/bosai/nowc/" target="_blank" rel="noopener noreferrer">雨雲レーダー（ナウキャスト）を開く <span aria-hidden="true">↗</span></a>
       </div>
       <div class="status-meter">
         <span>現在地</span>
@@ -113,7 +115,7 @@
   </dialog>
 
   <footer><span>工事進捗ダッシュボード・ローカル確認版</span><span>原本非改変 / 個人情報非表示</span><span>最終更新：<time id="updated-at"></time></span></footer>
-  <script src="data.js?v=20260713-1940"></script>
-  <script src="app.js?v=20260713-1940"></script>
+  <script src="data.js?v=20260714-1139"></script>
+  <script src="app.js?v=20260714-1139"></script>
 </body>
 </html>
