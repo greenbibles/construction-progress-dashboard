@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>材料カタログ | 工事進捗ダッシュボード</title>
+  <link rel="stylesheet" href="style.css?v=20260715-1246">
+  <link rel="stylesheet" href="materials.css?v=20260715-1246">
+  <link rel="stylesheet" href="catalog.css?v=20260715-1246">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">冊</div>
+    <div class="materials-header-title">
+      <p class="eyebrow">MATERIAL CATALOG</p>
+      <h1 id="catalog-project-name">材料カタログ</h1>
+    </div>
+    <a class="materials-back" href="materials.html">← 材料資料へ戻る</a>
+  </header>
+
+  <main class="catalog-main">
+    <section id="catalog-content" hidden>
+      <div class="catalog-hero card">
+        <p id="catalog-category" class="eyebrow"></p>
+        <h2 id="catalog-name"></h2>
+        <div class="catalog-meta">
+          <p><span>参照資料</span><strong id="catalog-source-title"></strong></p>
+          <p><span>版・発行日</span><strong id="catalog-source-version"></strong></p>
+          <p><span>表示ページ</span><strong id="catalog-page-count"></strong></p>
+        </div>
+      </div>
+
+      <aside class="catalog-caution">
+        <strong>カタログ原本を画像で表示しています</strong>
+        <p>各ページをタップすると画像単体で確認できます。使用時は最新版カタログ、製品表示、SDS、工事の承認条件を優先してください。</p>
+      </aside>
+
+      <div id="catalog-pages" class="catalog-pages" aria-live="polite"></div>
+    </section>
+
+    <section id="catalog-empty" class="catalog-empty card">
+      <strong>カタログを表示できません</strong>
+      <p>材料資料ページへ戻り、表示したい材料の「カタログを見る」から開いてください。</p>
+      <a href="materials.html">材料資料へ戻る</a>
+    </section>
+  </main>
+
+  <footer><span>工事進捗ダッシュボード・材料カタログ</span><span>公開確認済み資料のみ掲載</span><span>最終更新：<time id="catalog-updated-at"></time></span></footer>
+  <script src="data.js?v=20260715-1246"></script>
+  <script src="catalog.js?v=20260715-1246"></script>
+</body>
+</html>

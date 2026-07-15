@@ -25,8 +25,9 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir _site
-          cp index.html style.css weather-link.css app.js data.js robots.txt _site/
+          cp index.html materials.html catalog.html style.css weather-link.css materials.css catalog.css app.js materials.js catalog.js data.js robots.txt _site/
           cp -R gallery _site/gallery
+          cp -R materials _site/materials
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
