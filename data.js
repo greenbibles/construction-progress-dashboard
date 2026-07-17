@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-07-16",
-    lastActivity: "2026-07-16",
-    updatedAt: "2026-07-16T13:21:20+09:00",
-    status: "7月16日 鉄筋組立を実施",
-    currentPhase: "基礎（鉄筋組立）",
-    sourceFiles: 21,
+    asOf: "2026-07-17",
+    lastActivity: "2026-07-17",
+    updatedAt: "2026-07-17T12:27:19+09:00",
+    status: "7月17日 鉄骨表面拭き取りを実施",
+    currentPhase: "基礎（表面処理）",
+    sourceFiles: 22,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月17日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -195,11 +195,12 @@ window.PROGRESS_DATA = {
     { id: "painting", name: "塗装下塗り", start: "2026-05-25", end: "2026-05-29", status: "not-started", label: "未着手", summary: "計画されたが中断により未着手" },
     { id: "pause", name: "工事中断", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断", summary: "5月25日から7月8日まで中断。7月1日以降は再開準備を実施" },
     { id: "restart", name: "工事再開準備", start: "2026-07-01", end: "2026-07-08", status: "completed", label: "再開準備", summary: "中断期間中に再開準備および移動を実施" },
-    { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-16", status: "in-progress", label: "進行中", summary: "7月9日に着手し、7月16日に鉄筋組立を実施" },
+    { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-17", status: "in-progress", label: "進行中", summary: "7月9日に着手し、7月17日に鉄骨表面拭き取りを実施" },
     { id: "rain-holiday", name: "雨天休工", start: "2026-07-13", end: "2026-07-13", status: "paused", label: "実施済み", summary: "雨天のため休工を実施" },
-    { id: "foundation-plan", name: "基礎工（予定）", start: "2026-07-17", end: "2026-07-18", status: "planned", label: "予定", summary: "週報予定：鉄筋・型枠" }
+    { id: "foundation-plan", name: "基礎工（予定）", start: "2026-07-18", end: "2026-07-18", status: "planned", label: "予定", summary: "週報予定：鉄筋・型枠" }
   ],
   recent: [
+    { date: "2026-07-17", planned: "基礎（鉄筋・型枠）", actual: "鉄骨表面 拭き取り", weather: "晴れ", status: "in-progress" },
     { date: "2026-07-16", planned: "基礎（鉄筋・型枠）", actual: "鉄筋組立", weather: "曇り", status: "in-progress" },
     { date: "2026-07-15", planned: "基礎（鉄筋・型枠）", actual: "基礎（はつり）", weather: "晴れ", status: "in-progress" },
     { date: "2026-07-14", planned: "基礎（はつり）", actual: "基礎（はつり）", weather: "曇り", status: "in-progress" },
@@ -215,8 +216,7 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-07-17", work: "基礎（鉄筋・型枠）", note: "週報予定" },
-    { date: "2026-07-18", work: "基礎（鉄筋・型枠）", note: "週報予定" },
+    { date: "2026-07-18", work: "基礎（鉄筋・型枠）", note: "週報予定・実施確認待ち" },
     { date: "2026-07-19", work: "休工", note: "週報予定" }
   ],
   gallery: [
@@ -226,7 +226,8 @@ window.PROGRESS_DATA = {
     { date: "2026-04-24", phase: "下地調整", title: "塗装面のケレン", description: "既存塗膜や錆を除去する下地調整作業に着手しました。", image: "gallery/2026-04-24-preparation.jpg", alt: "足場を設置した灯台で行う下地調整作業" },
     { date: "2026-05-20", phase: "下地調整", title: "細部の下地調整", description: "接合部を含む鉄部のケレンを進め、塗装前の表面を整えました。", image: "gallery/2026-05-20-surface.jpg", alt: "ケレンで表面を整えた灯台鉄部の接合部" },
     { date: "2026-07-09", phase: "基礎工", title: "基礎はつり前の確認", description: "工事再開後、施工範囲を確認して基礎のはつり作業に着手しました。", image: "gallery/2026-07-09-foundation-before.jpg", alt: "はつり作業前の灯台基礎と施工範囲" },
-    { date: "2026-07-14", phase: "基礎工", title: "基礎のはつり進行", description: "灯台基礎周囲のはつりを進め、施工面の状態を確認しました。", image: "gallery/2026-07-14-foundation-progress.jpg", alt: "はつり作業が進んだ灯台基礎周囲の状態" }
+    { date: "2026-07-14", phase: "基礎工", title: "基礎のはつり進行", description: "灯台基礎周囲のはつりを進め、施工面の状態を確認しました。", image: "gallery/2026-07-14-foundation-progress.jpg", alt: "はつり作業が進んだ灯台基礎周囲の状態" },
+    { date: "2026-07-15", phase: "基礎工", title: "基礎コンクリートの状態確認", description: "基礎のはつり後、コンクリート表面とひび割れの状態を確認しました。", image: "gallery/2026-07-15-foundation-crack.jpg", alt: "はつり後に確認した灯台基礎コンクリートのひび割れ状況" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -244,7 +245,8 @@ window.PROGRESS_DATA = {
     { start: "2026-07-13", end: "2026-07-13", label: "雨天休工", status: "paused" },
     { start: "2026-07-14", end: "2026-07-15", label: "基礎はつり", status: "in-progress" },
     { start: "2026-07-16", end: "2026-07-16", label: "鉄筋組立", status: "in-progress" },
-    { start: "2026-07-17", end: "2026-07-18", label: "鉄筋・型枠（予定）", status: "planned" },
+    { start: "2026-07-17", end: "2026-07-17", label: "鉄骨表面拭き取り", status: "in-progress" },
+    { start: "2026-07-18", end: "2026-07-18", label: "鉄筋・型枠（予定）", status: "planned" },
     { start: "2026-07-19", end: "2026-07-19", label: "休工（予定）", status: "planned" }
   ]
 };
