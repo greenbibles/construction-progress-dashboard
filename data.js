@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-07-19",
-    lastActivity: "2026-07-17",
-    updatedAt: "2026-07-19T13:40:49+09:00",
-    status: "7月17日 鉄骨表面拭き取りを実施",
-    currentPhase: "基礎（表面処理）",
-    sourceFiles: 23,
+    asOf: "2026-07-20",
+    lastActivity: "2026-07-20",
+    updatedAt: "2026-07-21T10:24:00+09:00",
+    status: "7月20日 休工を確認",
+    currentPhase: "鉄部表面処理（予定）",
+    sourceFiles: 24,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月20日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月21日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -198,10 +198,12 @@ window.PROGRESS_DATA = {
     { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-17", status: "in-progress", label: "進行中", summary: "7月9日に着手し、7月17日に鉄骨表面拭き取りを実施" },
     { id: "rain-holiday", name: "雨天休工", start: "2026-07-13", end: "2026-07-13", status: "paused", label: "実施済み", summary: "雨天のため休工を実施" },
     { id: "foundation-plan", name: "基礎工（予定）", start: "2026-07-18", end: "2026-07-18", status: "planned", label: "確認待ち", summary: "週報予定：鉄筋・型枠。実施欄は未記入" },
+    { id: "holiday-july20", name: "休工", start: "2026-07-20", end: "2026-07-20", status: "paused", label: "実施済み", summary: "週報の実施欄で休工を確認" },
     { id: "steel-polishing-plan", name: "鉄部表面処理（予定）", start: "2026-07-21", end: "2026-07-22", status: "planned", label: "予定", summary: "週報予定：鉄骨磨き" },
     { id: "foundation-form-plan", name: "基礎工（予定）", start: "2026-07-23", end: "2026-07-25", status: "planned", label: "予定", summary: "週報予定：鉄筋組立・検査、型枠・モルタル" }
   ],
   recent: [
+    { date: "2026-07-20", planned: "休工", actual: "休工", weather: "—", status: "paused" },
     { date: "2026-07-17", planned: "基礎（鉄筋・型枠）", actual: "鉄骨表面 拭き取り", weather: "晴れ", status: "in-progress" },
     { date: "2026-07-16", planned: "基礎（鉄筋・型枠）", actual: "鉄筋組立", weather: "曇り", status: "in-progress" },
     { date: "2026-07-15", planned: "基礎（鉄筋・型枠）", actual: "基礎（はつり）", weather: "晴れ", status: "in-progress" },
@@ -218,7 +220,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-07-20", work: "休工", note: "週報予定" },
     { date: "2026-07-21", work: "鉄骨磨き", note: "週報予定" },
     { date: "2026-07-22", work: "鉄骨磨き", note: "週報予定" },
     { date: "2026-07-23", work: "鉄筋組立・検査", note: "週報予定" },
@@ -257,7 +258,7 @@ window.PROGRESS_DATA = {
     { start: "2026-07-17", end: "2026-07-17", label: "鉄骨表面拭き取り", status: "in-progress" },
     { start: "2026-07-18", end: "2026-07-18", label: "実施確認待ち", status: "planned" },
     { start: "2026-07-19", end: "2026-07-19", label: "休工（予定）", status: "planned" },
-    { start: "2026-07-20", end: "2026-07-20", label: "休工（予定）", status: "planned" },
+    { start: "2026-07-20", end: "2026-07-20", label: "休工", status: "paused" },
     { start: "2026-07-21", end: "2026-07-22", label: "鉄骨磨き（予定）", status: "planned" },
     { start: "2026-07-23", end: "2026-07-23", label: "鉄筋組立・検査（予定）", status: "planned" },
     { start: "2026-07-24", end: "2026-07-25", label: "型枠・モルタル（予定）", status: "planned" },
