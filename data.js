@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-07-23",
     lastActivity: "2026-07-23",
-    updatedAt: "2026-07-24T09:09:05+09:00",
+    updatedAt: "2026-07-24T09:40:42+09:00",
     status: "7月23日 型枠・モルタル打設を実施",
     currentPhase: "基礎工（モルタル打設）",
     sourceFiles: 24,
