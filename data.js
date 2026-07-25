@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-07-25",
     lastActivity: "2026-07-25",
-    updatedAt: "2026-07-25T10:20:25+09:00",
+    updatedAt: "2026-07-25T10:29:28+09:00",
     status: "7月25日 雨天休工",
     currentPhase: "基礎工（雨天休工）",
     sourceFiles: 25,
