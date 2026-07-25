@@ -20,7 +20,7 @@
   setText("updated-at", new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt)));
 
   const chartStart = new Date("2026-03-01T00:00:00");
-  const chartEnd = new Date("2026-07-31T00:00:00");
+  const chartEnd = new Date("2026-08-31T00:00:00");
   const span = chartEnd - chartStart;
   const gantt = document.getElementById("gantt");
   data.phases.forEach(phase => {
@@ -112,8 +112,10 @@
   const calendarPrev = document.getElementById("calendar-prev");
   const calendarNext = document.getElementById("calendar-next");
   const calendarTitle = document.getElementById("calendar-title");
-  const months = [2, 3, 4, 5, 6].map(month => new Date(2026, month, 1));
-  let selectedMonth = months.length - 1;
+  const months = [2, 3, 4, 5, 6, 7].map(month => new Date(2026, month, 1));
+  const asOfMonth = new Date(`${data.project.asOf}T00:00:00`).getMonth();
+  const asOfMonthIndex = months.findIndex(month => month.getMonth() === asOfMonth);
+  let selectedMonth = asOfMonthIndex >= 0 ? asOfMonthIndex : months.length - 1;
   const dateKey = date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
   const eventFor = key => data.calendarRanges.slice().reverse().find(range => key >= range.start && key <= range.end);
   const renderCalendar = () => {
