@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-07-27",
-    lastActivity: "2026-07-27",
-    updatedAt: "2026-07-27T09:12:46+09:00",
-    status: "7月27日 雨天休工",
+    asOf: "2026-07-28",
+    lastActivity: "2026-07-28",
+    updatedAt: "2026-07-28T09:31:38+09:00",
+    status: "7月28日 雨天休工",
     currentPhase: "基礎工（雨天休工）",
     sourceFiles: 25,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月28日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月29日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -203,13 +203,15 @@ window.PROGRESS_DATA = {
     { id: "temporary-holiday", name: "臨時休工", start: "2026-07-22", end: "2026-07-22", status: "paused", label: "実施済み", summary: "週報の実施欄で臨時休工を確認" },
     { id: "rain-holiday-july24-25", name: "雨天休工", start: "2026-07-24", end: "2026-07-25", status: "paused", label: "実施済み", summary: "雨天のため休工を実施" },
     { id: "holiday-july26", name: "休工", start: "2026-07-26", end: "2026-07-26", status: "paused", label: "実施済み", summary: "週報の実施欄で休工を確認" },
-    { id: "rain-holiday-july27", name: "雨天休工", start: "2026-07-27", end: "2026-07-27", status: "paused", label: "実施済み", summary: "生コン打設を予定していたが、雨天のため休工を実施" },
-    { id: "concrete-plan", name: "生コン打設（予定）", start: "2026-07-28", end: "2026-07-29", status: "planned", label: "予定", summary: "週報予定：生コン打設" },
+    { id: "concrete-july27", name: "生コン打設・型枠", start: "2026-07-27", end: "2026-07-27", status: "in-progress", label: "実施済み", summary: "生コン打設と型枠を実施" },
+    { id: "rain-holiday-july28", name: "雨天休工", start: "2026-07-28", end: "2026-07-28", status: "paused", label: "実施済み", summary: "生コン打設を予定していたが、雨天のため休工を実施" },
+    { id: "concrete-plan", name: "生コン打設（予定）", start: "2026-07-29", end: "2026-07-29", status: "planned", label: "予定", summary: "週報予定：生コン打設" },
     { id: "surface-protection-plan", name: "ケレン・養生（予定）", start: "2026-07-30", end: "2026-08-01", status: "planned", label: "予定", summary: "週報予定：ケレン・養生" },
     { id: "holiday-aug2-plan", name: "休工（予定）", start: "2026-08-02", end: "2026-08-02", status: "planned", label: "予定", summary: "週報予定：休工" }
   ],
   recent: [
-    { date: "2026-07-27", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
+    { date: "2026-07-28", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
+    { date: "2026-07-27", planned: "生コン打設", actual: "生コン打設・型枠", weather: "晴れのち曇り", status: "in-progress" },
     { date: "2026-07-26", planned: "休工", actual: "休工", weather: "—", status: "paused" },
     { date: "2026-07-25", planned: "型枠・モルタル", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-07-24", planned: "型枠・モルタル", actual: "休工", weather: "雨", status: "paused" },
@@ -233,7 +235,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-07-28", work: "生コン打設", note: "週報予定" },
     { date: "2026-07-29", work: "生コン打設", note: "週報予定" },
     { date: "2026-07-30", work: "ケレン・養生", note: "週報予定" },
     { date: "2026-07-31", work: "ケレン・養生", note: "週報予定" },
@@ -251,7 +252,8 @@ window.PROGRESS_DATA = {
     { date: "2026-07-15", phase: "基礎工", title: "基礎コンクリートの状態確認", description: "基礎のはつり後、コンクリート表面とひび割れの状態を確認しました。", image: "gallery/2026-07-15-foundation-crack.jpg", alt: "はつり後に確認した灯台基礎コンクリートのひび割れ状況" },
     { date: "2026-07-16", phase: "基礎工", title: "鉄筋組立の状況", description: "基礎周囲の鉄筋組立を進め、次工程へ向けた状態を確認しました。", image: "gallery/2026-07-16-rebar-assembly.jpg", alt: "はつり後の灯台基礎周囲に組み立てられた鉄筋" },
     { date: "2026-07-17", phase: "鉄部表面処理", title: "鉄部表面のケレン", description: "鉄部表面の錆や旧塗膜を落とし、塗装前の表面処理を進めました。", image: "gallery/2026-07-17-steel-surface.jpg", alt: "ケレン作業後の灯台鉄部表面" },
-    { date: "2026-07-23", phase: "基礎工", title: "モルタル打設の完了", description: "型枠内へモルタルを打設し、灯台基礎周囲の表面を整えました。", image: "gallery/2026-07-23-mortar-complete.jpg", alt: "型枠内へモルタルを打設した灯台基礎周囲の完了状態" }
+    { date: "2026-07-23", phase: "基礎工", title: "モルタル打設の完了", description: "型枠内へモルタルを打設し、灯台基礎周囲の表面を整えました。", image: "gallery/2026-07-23-mortar-complete.jpg", alt: "型枠内へモルタルを打設した灯台基礎周囲の完了状態" },
+    { date: "2026-07-27", phase: "基礎工", title: "無収縮モルタルの打設", description: "型枠内へ無収縮モルタルを打設し、灯台基礎周囲の天端を整えました。", image: "gallery/2026-07-27-nonshrink-mortar.jpg", alt: "灯台基礎周囲へ無収縮モルタルを打設した完了状態" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -278,8 +280,9 @@ window.PROGRESS_DATA = {
     { start: "2026-07-23", end: "2026-07-23", label: "型枠・モルタル打設", status: "in-progress" },
     { start: "2026-07-24", end: "2026-07-25", label: "雨天休工", status: "paused" },
     { start: "2026-07-26", end: "2026-07-26", label: "休工", status: "paused" },
-    { start: "2026-07-27", end: "2026-07-27", label: "雨天休工", status: "paused" },
-    { start: "2026-07-28", end: "2026-07-29", label: "生コン打設（予定）", status: "planned" },
+    { start: "2026-07-27", end: "2026-07-27", label: "生コン打設・型枠", status: "in-progress" },
+    { start: "2026-07-28", end: "2026-07-28", label: "雨天休工", status: "paused" },
+    { start: "2026-07-29", end: "2026-07-29", label: "生コン打設（予定）", status: "planned" },
     { start: "2026-07-30", end: "2026-08-01", label: "ケレン・養生（予定）", status: "planned" },
     { start: "2026-08-02", end: "2026-08-02", label: "休工（予定）", status: "planned" }
   ]
