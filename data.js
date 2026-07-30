@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-07-30",
     lastActivity: "2026-07-30",
-    updatedAt: "2026-07-30T09:42:35+09:00",
+    updatedAt: "2026-07-30T09:45:40+09:00",
     status: "7月30日 休工",
     currentPhase: "基礎工（休工）",
     sourceFiles: 25,
@@ -199,7 +199,7 @@ window.PROGRESS_DATA = {
   ],
   recent: [
     { date: "2026-07-30", planned: "ケレン・養生", actual: "休工", weather: "—", status: "paused" },
-    { date: "2026-07-29", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
+    { date: "2026-07-29", planned: "生コン打設", actual: "機材搬入", weather: "雨", status: "completed" },
     { date: "2026-07-28", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-07-27", planned: "生コン打設", actual: "生コン打設・型枠", weather: "晴れのち曇り", status: "in-progress" },
     { date: "2026-07-26", planned: "休工", actual: "休工", weather: "—", status: "paused" },
@@ -270,7 +270,7 @@ window.PROGRESS_DATA = {
     { start: "2026-07-26", end: "2026-07-26", label: "休工", status: "paused" },
     { start: "2026-07-27", end: "2026-07-27", label: "生コン打設・型枠", status: "in-progress" },
     { start: "2026-07-28", end: "2026-07-28", label: "雨天休工", status: "paused" },
-    { start: "2026-07-29", end: "2026-07-29", label: "雨天休工", status: "paused" },
+    { start: "2026-07-29", end: "2026-07-29", label: "機材搬入", status: "completed" },
     { start: "2026-07-30", end: "2026-07-30", label: "休工", status: "paused" },
     { start: "2026-07-31", end: "2026-08-01", label: "ケレン・養生（予定）", status: "planned" },
     { start: "2026-08-02", end: "2026-08-02", label: "休工（予定）", status: "planned" }
