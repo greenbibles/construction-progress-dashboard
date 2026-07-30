@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-07-28",
-    lastActivity: "2026-07-28",
-    updatedAt: "2026-07-28T09:40:07+09:00",
-    status: "7月28日 雨天休工",
-    currentPhase: "基礎工（雨天休工）",
+    asOf: "2026-07-30",
+    lastActivity: "2026-07-30",
+    updatedAt: "2026-07-30T09:42:35+09:00",
+    status: "7月30日 休工",
+    currentPhase: "基礎工（休工）",
     sourceFiles: 25,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月29日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日の実施欄は未記入のため確認待ちです。7月31日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -194,11 +194,12 @@ window.PROGRESS_DATA = {
     { id: "surface", name: "下地調整（ケレン）", start: "2026-04-24", end: "2026-05-20", status: "paused", label: "実施後中断", summary: "下地調整と養生まで進行。完了の明記なし" },
     { id: "painting", name: "塗装下塗り", start: "2026-05-25", end: "2026-05-29", status: "not-started", label: "未着手", summary: "計画されたが中断により未着手" },
     { id: "pause-restart", name: "工事中断・再開準備", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断後再開", summary: "5月25日から中断。7月1日以降に再開準備を行い、7月9日に工事を再開" },
-    { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-28", status: "in-progress", label: "施工中", summary: "はつり、鉄筋組立、型枠・モルタル打設を実施。期間中の休工日はカレンダーに記録" },
-    { id: "concrete-plan", name: "生コン打設（予定）", start: "2026-07-29", end: "2026-07-29", status: "planned", label: "予定", summary: "週報予定：生コン打設" },
-    { id: "surface-protection-plan", name: "ケレン・養生（予定）", start: "2026-07-30", end: "2026-08-01", status: "planned", label: "予定", summary: "週報予定：ケレン・養生" }
+    { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-30", status: "in-progress", label: "施工中", summary: "はつり、鉄筋組立、型枠・モルタル打設を実施。期間中の休工日はカレンダーに記録" },
+    { id: "surface-protection-plan", name: "ケレン・養生（予定）", start: "2026-07-31", end: "2026-08-01", status: "planned", label: "予定", summary: "週報予定：ケレン・養生" }
   ],
   recent: [
+    { date: "2026-07-30", planned: "ケレン・養生", actual: "休工", weather: "—", status: "paused" },
+    { date: "2026-07-29", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-07-28", planned: "生コン打設", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-07-27", planned: "生コン打設", actual: "生コン打設・型枠", weather: "晴れのち曇り", status: "in-progress" },
     { date: "2026-07-26", planned: "休工", actual: "休工", weather: "—", status: "paused" },
@@ -224,8 +225,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-07-29", work: "生コン打設", note: "週報予定" },
-    { date: "2026-07-30", work: "ケレン・養生", note: "週報予定" },
     { date: "2026-07-31", work: "ケレン・養生", note: "週報予定" },
     { date: "2026-08-01", work: "ケレン・養生", note: "週報予定" },
     { date: "2026-08-02", work: "休工", note: "週報予定" }
@@ -271,8 +270,9 @@ window.PROGRESS_DATA = {
     { start: "2026-07-26", end: "2026-07-26", label: "休工", status: "paused" },
     { start: "2026-07-27", end: "2026-07-27", label: "生コン打設・型枠", status: "in-progress" },
     { start: "2026-07-28", end: "2026-07-28", label: "雨天休工", status: "paused" },
-    { start: "2026-07-29", end: "2026-07-29", label: "生コン打設（予定）", status: "planned" },
-    { start: "2026-07-30", end: "2026-08-01", label: "ケレン・養生（予定）", status: "planned" },
+    { start: "2026-07-29", end: "2026-07-29", label: "雨天休工", status: "paused" },
+    { start: "2026-07-30", end: "2026-07-30", label: "休工", status: "paused" },
+    { start: "2026-07-31", end: "2026-08-01", label: "ケレン・養生（予定）", status: "planned" },
     { start: "2026-08-02", end: "2026-08-02", label: "休工（予定）", status: "planned" }
   ]
 };
