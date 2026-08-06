@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-04",
-    lastActivity: "2026-08-04",
-    updatedAt: "2026-08-04T16:30:57+09:00",
-    status: "8月4日 ケレン・養生",
-    currentPhase: "ケレン・養生",
+    asOf: "2026-08-05",
+    lastActivity: "2026-08-05",
+    updatedAt: "2026-08-06T09:19:43+09:00",
+    status: "8月5日 ケレン・拭き取り・錆止め塗装",
+    currentPhase: "下地調整・錆止め塗装",
     sourceFiles: 26,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日は更新された週報の実施欄でケレン・養生を確認しました。8月5日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日は週報でケレン・養生、8月5日は週報でケレン・拭き取り、写真記録で錆止め塗装を確認しました。8月6日以降は週報の予定欄による見込みで、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -195,10 +195,11 @@ window.PROGRESS_DATA = {
     { id: "painting", name: "塗装下塗り", start: "2026-05-25", end: "2026-05-29", status: "not-started", label: "未着手", summary: "計画されたが中断により未着手" },
     { id: "pause-restart", name: "工事中断・再開準備", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断後再開", summary: "5月25日から中断。7月1日以降に再開準備を行い、7月9日に工事を再開" },
     { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-31", status: "completed", label: "実施済み", summary: "はつり、鉄筋組立、型枠・モルタル打設、モルタル仕上げを実施" },
-    { id: "surface-protection", name: "ケレン・養生", start: "2026-08-03", end: "2026-08-05", status: "in-progress", label: "施工中", summary: "8月3日から4日にケレン・養生を実施。8月5日は週報予定" },
-    { id: "painting-plan", name: "塗装下塗り（予定）", start: "2026-08-06", end: "2026-08-08", status: "planned", label: "予定", summary: "週報予定：塗装下塗り" }
+    { id: "surface-protection", name: "ケレン・養生・拭き取り", start: "2026-08-03", end: "2026-08-05", status: "completed", label: "実施済み", summary: "8月3日から4日にケレン・養生、8月5日にケレン・拭き取りを実施" },
+    { id: "painting-plan", name: "塗装下塗り", start: "2026-08-05", end: "2026-08-08", status: "in-progress", label: "施工中", summary: "8月5日は写真記録で錆止め塗装を確認。8月6日から8日は週報予定：下塗り" }
   ],
   recent: [
+    { date: "2026-08-05", planned: "ケレン・養生", actual: "ケレン・拭き取り・錆止め塗装", weather: "晴れ", status: "in-progress" },
     { date: "2026-08-04", planned: "ケレン・養生", actual: "ケレン・養生", weather: "晴れ", status: "in-progress" },
     { date: "2026-08-03", planned: "ケレン・養生", actual: "ケレン・養生", weather: "晴れ", status: "in-progress" },
     { date: "2026-07-31", planned: "ケレン・養生", actual: "生コン打設", weather: "曇り時々雨", status: "in-progress" },
@@ -229,7 +230,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-08-05", work: "ケレン・養生", note: "週報予定" },
     { date: "2026-08-06", work: "下塗り", note: "週報予定" },
     { date: "2026-08-07", work: "下塗り", note: "週報予定" },
     { date: "2026-08-08", work: "下塗り", note: "週報予定" },
@@ -249,7 +249,8 @@ window.PROGRESS_DATA = {
     { date: "2026-07-23", phase: "基礎工", title: "モルタル打設の完了", description: "型枠内へモルタルを打設し、灯台基礎周囲の表面を整えました。", image: "gallery/2026-07-23-mortar-complete.jpg", alt: "型枠内へモルタルを打設した灯台基礎周囲の完了状態" },
     { date: "2026-07-27", phase: "基礎工", title: "無収縮モルタルの打設", description: "型枠内へ無収縮モルタルを打設し、灯台基礎周囲の天端を整えました。", image: "gallery/2026-07-27-nonshrink-mortar.jpg", alt: "灯台基礎周囲へ無収縮モルタルを打設した完了状態" },
     { date: "2026-07-31", phase: "基礎工", title: "基礎モルタルの仕上げ", description: "灯台基礎のモルタル上塗りを行い、基礎表面を仕上げました。", image: "gallery/2026-07-31-foundation-mortar-finish.jpg", alt: "モルタル上塗りを終えた灯台基礎の完成状態" },
-    { date: "2026-08-03", phase: "下地調整", title: "鉄部のケレン", description: "灯台鉄部の錆や旧塗膜を除去し、塗装に向けた下地調整を進めました。", image: "gallery/2026-08-03-steel-preparation.jpg", alt: "ケレン作業で表面を整えた灯台の梁と斜材" }
+    { date: "2026-08-03", phase: "下地調整", title: "鉄部のケレン", description: "灯台鉄部の錆や旧塗膜を除去し、塗装に向けた下地調整を進めました。", image: "gallery/2026-08-03-steel-preparation.jpg", alt: "ケレン作業で表面を整えた灯台の梁と斜材" },
+    { date: "2026-08-05", phase: "塗装工", title: "錆止め塗装の開始", description: "ケレンと拭き取りを終えた鉄部へ錆止め塗料を塗布し、塗装工程を進めました。", image: "gallery/2026-08-05-rust-preventive-paint.jpg", alt: "ケレン後の灯台鉄部へ刷毛で錆止め塗料を塗布する状況" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -282,8 +283,8 @@ window.PROGRESS_DATA = {
     { start: "2026-07-30", end: "2026-07-30", label: "雨天休工", status: "paused" },
     { start: "2026-07-31", end: "2026-07-31", label: "生コン打設", status: "in-progress" },
     { start: "2026-08-01", end: "2026-08-02", label: "実施確認待ち", status: "planned" },
-    { start: "2026-08-03", end: "2026-08-04", label: "ケレン・養生", status: "in-progress" },
-    { start: "2026-08-05", end: "2026-08-05", label: "ケレン・養生（予定）", status: "planned" },
+    { start: "2026-08-03", end: "2026-08-04", label: "ケレン・養生", status: "completed" },
+    { start: "2026-08-05", end: "2026-08-05", label: "ケレン・拭き取り・錆止め塗装", status: "in-progress" },
     { start: "2026-08-06", end: "2026-08-08", label: "下塗り（予定）", status: "planned" },
     { start: "2026-08-09", end: "2026-08-09", label: "休工（予定）", status: "planned" }
   ]
