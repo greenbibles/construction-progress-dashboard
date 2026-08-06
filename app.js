@@ -19,15 +19,46 @@
   setText("source-count", data.project.sourceFiles);
   setText("updated-at", new Intl.DateTimeFormat("ja-JP", { year:"numeric", month:"long", day:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo", timeZoneName:"short" }).format(new Date(data.project.updatedAt)));
 
-  const chartStart = new Date("2026-03-01T00:00:00");
-  const chartEnd = new Date("2026-08-31T00:00:00");
-  const span = chartEnd - chartStart;
+  const DAY = 86400000;
+  const parseDate = iso => new Date(`${iso}T00:00:00`);
+  const phaseDates = data.phases.flatMap(phase => [phase.start, phase.end]).filter(Boolean).sort();
+  const rawChartStart = data.project.timelineStart || phaseDates[0] || data.project.recordStart || data.project.asOf;
+  const rawChartEnd = data.project.timelineEnd || phaseDates.at(-1) || data.project.contractEnd || data.project.asOf;
+  const firstChartDate = parseDate(rawChartStart);
+  const lastChartDate = parseDate(rawChartEnd);
+  const chartStart = new Date(firstChartDate.getFullYear(), firstChartDate.getMonth(), 1);
+  const chartEnd = new Date(lastChartDate.getFullYear(), lastChartDate.getMonth() + 1, 0);
+  const span = Math.max(DAY, chartEnd - chartStart + DAY);
   const gantt = document.getElementById("gantt");
+  const ganttScale = document.getElementById("gantt-scale");
+  const ganttViewport = document.querySelector(".gantt-viewport");
+  const scaleMonths = [];
+  for (let month = new Date(chartStart); month <= chartEnd; month = new Date(month.getFullYear(), month.getMonth() + 1, 1)) {
+    scaleMonths.push(new Date(month));
+  }
+  const monthCount = Math.max(1, scaleMonths.length);
+  const monthMinWidth = 96;
+  ganttViewport.style.setProperty("--gantt-month-count", String(monthCount));
+  ganttViewport.style.setProperty("--gantt-track-min-width", `${monthCount * monthMinWidth}px`);
+  ganttScale.style.gridTemplateColumns = `var(--gantt-label-width) repeat(${monthCount}, minmax(${monthMinWidth}px, 1fr))`;
+
+  const ganttAxisLabel = document.createElement("span");
+  ganttAxisLabel.className = "gantt-axis-label";
+  ganttAxisLabel.textContent = "工程名";
+  ganttScale.appendChild(ganttAxisLabel);
+  scaleMonths.forEach((month, index) => {
+    const label = document.createElement("span");
+    label.textContent = index === 0 || month.getMonth() === 0
+      ? `${month.getFullYear()}年${month.getMonth() + 1}月`
+      : `${month.getMonth() + 1}月`;
+    ganttScale.appendChild(label);
+  });
+
   data.phases.forEach(phase => {
-    const start = new Date(`${phase.start}T00:00:00`);
-    const end = new Date(`${phase.end}T00:00:00`);
+    const start = parseDate(phase.start);
+    const end = parseDate(phase.end);
     const left = Math.max(0, (start - chartStart) / span * 100);
-    const width = Math.max(1.3, (end - start + 86400000) / span * 100);
+    const width = Math.min(100 - left, Math.max(1.3, (end - start + DAY) / span * 100));
     const row = document.createElement("div");
     row.className = "gantt-row";
     row.innerHTML = `<div class="gantt-label"><strong>${phase.name}</strong><small>${phase.label} ・ ${phase.start.slice(5).replace("-","/")}–${phase.end.slice(5).replace("-","/")}</small></div><div class="gantt-track"><div class="gantt-bar ${phase.status}" style="left:${left}%;width:${width}%" title="${phase.summary}">${phase.label}</div></div>`;

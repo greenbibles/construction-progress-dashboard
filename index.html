@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>工事進捗ダッシュボード</title>
-  <link rel="stylesheet" href="style.css?v=20260804-1630">
-  <link rel="stylesheet" href="weather-link.css?v=20260804-1630">
-  <link rel="stylesheet" href="materials.css?v=20260804-1630">
+  <link rel="stylesheet" href="style.css?v=20260806-1019">
+  <link rel="stylesheet" href="weather-link.css?v=20260806-1019">
+  <link rel="stylesheet" href="materials.css?v=20260806-1019">
 </head>
 <body>
   <header class="topbar">
@@ -53,8 +53,8 @@
       <div class="legend"><span class="dot completed"></span>実施済み <span class="dot active"></span>進行中 <span class="dot paused"></span>中断・休工 <span class="dot planned"></span>予定</div>
     </section>
     <section class="card gantt-wrap">
-      <div class="gantt-scale"><span>3月</span><span>4月</span><span>5月</span><span>6月</span><span>7月</span><span>8月</span></div>
-      <div class="gantt-scroll" tabindex="0" aria-label="大工程一覧。上下にスクロールして確認できます">
+      <div class="gantt-viewport" tabindex="0" aria-label="大工程一覧。工程名を固定したまま左右と上下にスクロールして確認できます">
+        <div id="gantt-scale" class="gantt-scale"></div>
         <div id="gantt" class="gantt"></div>
       </div>
     </section>
@@ -121,7 +121,7 @@
     </div>
   </dialog>
   <footer><span>工事進捗ダッシュボード・ローカル確認版</span><span>原本非改変 / 個人情報非表示</span><span>最終更新：<time id="updated-at"></time></span></footer>
-  <script src="data.js?v=20260806-0919"></script>
-  <script src="app.js?v=20260806-0919"></script>
+  <script src="data.js?v=20260806-1019"></script>
+  <script src="app.js?v=20260806-1019"></script>
 </body>
 </html>
