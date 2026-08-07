@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-07",
-    lastActivity: "2026-08-07",
-    updatedAt: "2026-08-07T15:48:54+09:00",
-    status: "8月7日 下塗り",
-    currentPhase: "塗装下塗り",
-    sourceFiles: 26,
+    asOf: "2026-08-08",
+    lastActivity: "2026-08-08",
+    updatedAt: "2026-08-08T07:10:53+09:00",
+    status: "8月8日 休工",
+    currentPhase: "休工",
+    sourceFiles: 27,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗りを確認しました。8月8日の下塗りと8月9日の休工は週報予定で、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日は休工を確認しました。8月9日の休工と8月10日以降のFRP部分ケレンは週報予定で、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -196,9 +196,11 @@ window.PROGRESS_DATA = {
     { id: "pause-restart", name: "工事中断・再開準備", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断後再開", summary: "5月25日から中断。7月1日以降に再開準備を行い、7月9日に工事を再開" },
     { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-31", status: "completed", label: "実施済み", summary: "はつり、鉄筋組立、型枠・モルタル打設、モルタル仕上げを実施" },
     { id: "surface-protection", name: "ケレン・養生・拭き取り", start: "2026-08-03", end: "2026-08-05", status: "completed", label: "実施済み", summary: "8月3日から4日にケレン・養生、8月5日にケレン・拭き取りを実施" },
-    { id: "painting-plan", name: "塗装下塗り", start: "2026-08-05", end: "2026-08-08", status: "in-progress", label: "施工中", summary: "8月5日に錆止め塗装、8月6日に養生・下塗り、8月7日に下塗りを確認。8月8日は週報予定：下塗り" }
+    { id: "painting-plan", name: "塗装下塗り", start: "2026-08-05", end: "2026-08-07", status: "completed", label: "実施済み", summary: "8月5日に錆止め塗装、8月6日に養生・下塗り、8月7日に下塗りを実施" },
+    { id: "frp-preparation", name: "FRP部分ケレン（予定）", start: "2026-08-10", end: "2026-08-14", status: "planned", label: "予定", summary: "週報予定：FRP部分ケレン" }
   ],
   recent: [
+    { date: "2026-08-08", planned: "下塗り", actual: "休工", weather: "—", status: "paused" },
     { date: "2026-08-07", planned: "下塗り", actual: "下塗り", weather: "晴れ", status: "in-progress" },
     { date: "2026-08-06", planned: "下塗り", actual: "養生・下塗り", weather: "晴れ", status: "in-progress" },
     { date: "2026-08-05", planned: "ケレン・養生", actual: "ケレン・拭き取り・錆止め塗装", weather: "晴れ", status: "in-progress" },
@@ -232,8 +234,14 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-08-08", work: "下塗り", note: "週報予定" },
-    { date: "2026-08-09", work: "休工", note: "週報予定" }
+    { date: "2026-08-09", work: "休工", note: "週報予定" },
+    { date: "2026-08-10", work: "FRP部分ケレン", note: "週報予定" },
+    { date: "2026-08-11", work: "FRP部分ケレン", note: "週報予定" },
+    { date: "2026-08-12", work: "FRP部分ケレン", note: "週報予定" },
+    { date: "2026-08-13", work: "FRP部分ケレン", note: "週報予定" },
+    { date: "2026-08-14", work: "FRP部分ケレン", note: "週報予定" },
+    { date: "2026-08-15", work: "休工", note: "週報予定" },
+    { date: "2026-08-16", work: "休工", note: "週報予定" }
   ],
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
@@ -288,7 +296,9 @@ window.PROGRESS_DATA = {
     { start: "2026-08-05", end: "2026-08-05", label: "ケレン・拭き取り・錆止め塗装", status: "in-progress" },
     { start: "2026-08-06", end: "2026-08-06", label: "養生・下塗り", status: "in-progress" },
     { start: "2026-08-07", end: "2026-08-07", label: "下塗り", status: "in-progress" },
-    { start: "2026-08-08", end: "2026-08-08", label: "下塗り（予定）", status: "planned" },
-    { start: "2026-08-09", end: "2026-08-09", label: "休工（予定）", status: "planned" }
+    { start: "2026-08-08", end: "2026-08-08", label: "休工", status: "paused" },
+    { start: "2026-08-09", end: "2026-08-09", label: "休工（予定）", status: "planned" },
+    { start: "2026-08-10", end: "2026-08-14", label: "FRP部分ケレン（予定）", status: "planned" },
+    { start: "2026-08-15", end: "2026-08-16", label: "休工（予定）", status: "planned" }
   ]
 };
