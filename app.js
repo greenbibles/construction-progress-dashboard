@@ -143,11 +143,21 @@
   const calendarPrev = document.getElementById("calendar-prev");
   const calendarNext = document.getElementById("calendar-next");
   const calendarTitle = document.getElementById("calendar-title");
-  const months = [2, 3, 4, 5, 6, 7].map(month => new Date(2026, month, 1));
-  const asOfMonth = new Date(`${data.project.asOf}T00:00:00`).getMonth();
-  const asOfMonthIndex = months.findIndex(month => month.getMonth() === asOfMonth);
-  let selectedMonth = asOfMonthIndex >= 0 ? asOfMonthIndex : months.length - 1;
   const dateKey = date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const today = new Date();
+  const todayKey = dateKey(today);
+  const months = [2, 3, 4, 5, 6, 7].map(month => new Date(2026, month, 1));
+  const todayWithinProject = todayKey >= data.project.recordStart && todayKey <= data.project.contractEnd;
+  if (todayWithinProject && !months.some(month => month.getFullYear() === today.getFullYear() && month.getMonth() === today.getMonth())) {
+    months.push(new Date(today.getFullYear(), today.getMonth(), 1));
+    months.sort((left, right) => left - right);
+  }
+  const asOfDate = new Date(`${data.project.asOf}T00:00:00`);
+  const todayMonthIndex = todayWithinProject
+    ? months.findIndex(month => month.getFullYear() === today.getFullYear() && month.getMonth() === today.getMonth())
+    : -1;
+  const asOfMonthIndex = months.findIndex(month => month.getFullYear() === asOfDate.getFullYear() && month.getMonth() === asOfDate.getMonth());
+  let selectedMonth = todayMonthIndex >= 0 ? todayMonthIndex : (asOfMonthIndex >= 0 ? asOfMonthIndex : months.length - 1);
   const eventFor = key => data.calendarRanges.slice().reverse().find(range => key >= range.start && key <= range.end);
   const renderCalendar = () => {
     const month = months[selectedMonth];
@@ -166,8 +176,10 @@
     for (let day = 1; day <= days; day++) {
       const key = dateKey(new Date(year, monthNumber - 1, day));
       const event = eventFor(key);
+      const isToday = key === todayKey;
       const cell = document.createElement("div");
-      cell.className = "calendar-day";
+      cell.className = `calendar-day${isToday ? " today" : ""}`;
+      if (isToday) cell.setAttribute("aria-current", "date");
       cell.innerHTML = `<span class="num">${day}</span>${event ? `<span class="event ${event.status}">${event.label}</span>` : ""}`;
       calendar.appendChild(cell);
     }
