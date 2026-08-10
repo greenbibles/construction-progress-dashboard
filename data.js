@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-08-08",
     lastActivity: "2026-08-08",
-    updatedAt: "2026-08-08T07:10:53+09:00",
+    updatedAt: "2026-08-10T10:05:34+09:00",
     status: "8月8日 休工",
     currentPhase: "休工",
     sourceFiles: 27,
@@ -246,8 +246,7 @@ window.PROGRESS_DATA = {
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
     { date: "2026-04-20", phase: "準備工", title: "資機材の搬入", description: "足場材などの資機材を現地へ搬入し、施工準備を進めました。", image: "gallery/2026-04-20-materials.jpg", alt: "灯台脇に搬入された足場用資材" },
-    { date: "2026-04-23", phase: "仮設工事", title: "足場の設置", description: "灯台鉄部の作業を安全に行うため、作業用足場を設置しました。", image: "gallery/2026-04-23-scaffold.jpg", alt: "灯台鉄部の周囲に設置された作業用足場" },
-    { date: "2026-04-24", phase: "下地調整", title: "塗装面のケレン", description: "既存塗膜や錆を除去する下地調整作業に着手しました。", image: "gallery/2026-04-24-preparation.jpg", alt: "足場を設置した灯台で行う下地調整作業" },
+    { date: "2026-04-28", phase: "仮設工事", title: "足場の設置", description: "灯台鉄部の周囲に設置した作業用足場の全景を記録しました。", image: "gallery/2026-04-28-scaffold-complete.jpg", alt: "灯台鉄部の周囲に設置された作業用足場の全景と足場仮設の工事看板" },
     { date: "2026-05-20", phase: "下地調整", title: "細部の下地調整", description: "接合部を含む鉄部のケレンを進め、塗装前の表面を整えました。", image: "gallery/2026-05-20-surface.jpg", alt: "ケレンで表面を整えた灯台鉄部の接合部" },
     { date: "2026-07-09", phase: "基礎工", title: "基礎はつり前の確認", description: "工事再開後、施工範囲を確認して基礎のはつり作業に着手しました。", image: "gallery/2026-07-09-foundation-before.jpg", alt: "はつり作業前の灯台基礎と施工範囲" },
     { date: "2026-07-14", phase: "基礎工", title: "基礎のはつり進行", description: "灯台基礎周囲のはつりを進め、施工面の状態を確認しました。", image: "gallery/2026-07-14-foundation-progress.jpg", alt: "はつり作業が進んだ灯台基礎周囲の状態" },
