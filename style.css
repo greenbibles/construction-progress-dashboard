@@ -69,3 +69,4 @@
 }
 @media(max-width:850px){.gantt-viewport{--gantt-label-width:190px}}
 @media(max-width:540px){.gantt-wrap{padding:18px 14px}.gantt-viewport{--gantt-label-width:174px}}
+@media(max-width:540px){.calendar-nav button,.photo-controls button{min-height:45px}}
