@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-13",
-    lastActivity: "2026-08-13",
-    updatedAt: "2026-08-13T17:43:23+09:00",
-    status: "8月13日 FRP部分ケレン",
-    currentPhase: "FRP部分ケレン",
+    asOf: "2026-08-17",
+    lastActivity: "2026-08-17",
+    updatedAt: "2026-08-18T08:15:00+09:00",
+    status: "8月17日 休工",
+    currentPhase: "休工（塗料入荷待ち）",
     sourceFiles: 28,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月14日のFRP部分ケレン、8月15日から16日の休工、8月17日から22日の塗料入荷次第再開予定の休工、8月23日の休工は週報予定で、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から17日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月18日から22日の塗料入荷次第再開予定の休工と8月23日の休工は週報予定で、実施確認後に実績へ更新します。"
   },
   materials: [
     {
@@ -197,11 +197,15 @@ window.PROGRESS_DATA = {
     { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-31", status: "completed", label: "実施済み", summary: "はつり、鉄筋組立、型枠・モルタル打設、モルタル仕上げを実施" },
     { id: "surface-protection", name: "ケレン・養生・拭き取り", start: "2026-08-03", end: "2026-08-05", status: "completed", label: "実施済み", summary: "8月3日から4日にケレン・養生、8月5日にケレン・拭き取りを実施" },
     { id: "painting-plan", name: "塗装下塗り", start: "2026-08-05", end: "2026-08-07", status: "completed", label: "実施済み", summary: "8月5日に錆止め塗装、8月6日に養生・下塗り、8月7日に下塗りを実施" },
-    { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "in-progress", label: "実施中", summary: "8月10日、12日、13日に実施。8月11日は雨天休工" },
-    { id: "frp-preparation-plan", name: "FRP部分ケレン（予定）", start: "2026-08-14", end: "2026-08-14", status: "planned", label: "予定", summary: "週報予定：FRP部分ケレン" },
-    { id: "paint-arrival-wait", name: "塗料入荷待ち（休工予定）", start: "2026-08-17", end: "2026-08-22", status: "planned", label: "予定", summary: "週報予定：休工。塗料入荷次第再開" }
+    { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "paused", label: "実施後休工", summary: "8月10日、12日、13日に実施。8月11日は雨天休工、8月14日から休工" },
+    { id: "paint-arrival-wait", name: "塗料入荷待ち・休工", start: "2026-08-14", end: "2026-08-17", status: "paused", label: "休工中", summary: "8月14日から17日まで休工を確認" },
+    { id: "paint-arrival-wait-plan", name: "塗料入荷待ち（休工予定）", start: "2026-08-18", end: "2026-08-22", status: "planned", label: "予定", summary: "週報予定：休工。塗料入荷次第再開" }
   ],
   recent: [
+    { date: "2026-08-17", planned: "休工予定（塗料入荷次第再開）", actual: "休工", weather: "—", status: "paused" },
+    { date: "2026-08-16", planned: "休工", actual: "休工", weather: "—", status: "paused" },
+    { date: "2026-08-15", planned: "休工", actual: "休工", weather: "—", status: "paused" },
+    { date: "2026-08-14", planned: "FRP部分ケレン", actual: "休工", weather: "—", status: "paused" },
     { date: "2026-08-13", planned: "FRP部分ケレン", actual: "FRP部分ケレン", weather: "晴れ", status: "in-progress" },
     { date: "2026-08-12", planned: "FRP部分ケレン", actual: "FRP部分ケレン", weather: "晴れのち雨", status: "in-progress" },
     { date: "2026-08-11", planned: "FRP部分ケレン", actual: "休工", weather: "雨", status: "paused" },
@@ -241,10 +245,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-08-14", work: "FRP部分ケレン", note: "週報予定" },
-    { date: "2026-08-15", work: "休工", note: "週報予定" },
-    { date: "2026-08-16", work: "休工", note: "週報予定" },
-    { date: "2026-08-17", work: "休工", note: "塗料入荷次第再開予定" },
     { date: "2026-08-18", work: "休工", note: "塗料入荷次第再開予定" },
     { date: "2026-08-19", work: "休工", note: "塗料入荷次第再開予定" },
     { date: "2026-08-20", work: "休工", note: "塗料入荷次第再開予定" },
@@ -312,9 +312,8 @@ window.PROGRESS_DATA = {
     { start: "2026-08-11", end: "2026-08-11", label: "雨天休工", status: "paused" },
     { start: "2026-08-12", end: "2026-08-12", label: "FRP部分ケレン", status: "in-progress" },
     { start: "2026-08-13", end: "2026-08-13", label: "FRP部分ケレン", status: "in-progress" },
-    { start: "2026-08-14", end: "2026-08-14", label: "FRP部分ケレン（予定）", status: "planned" },
-    { start: "2026-08-15", end: "2026-08-16", label: "休工（予定）", status: "planned" },
-    { start: "2026-08-17", end: "2026-08-22", label: "休工（塗料入荷次第再開予定）", status: "planned" },
+    { start: "2026-08-14", end: "2026-08-17", label: "休工", status: "paused" },
+    { start: "2026-08-18", end: "2026-08-22", label: "休工（塗料入荷次第再開予定）", status: "planned" },
     { start: "2026-08-23", end: "2026-08-23", label: "休工（予定）", status: "planned" }
   ]
 };
