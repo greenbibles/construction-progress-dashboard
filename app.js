@@ -13,6 +13,8 @@
   setText("as-of", fmt(data.project.asOf));
   setText("project-status", data.project.status);
   setText("current-phase", data.project.currentPhase);
+  setText("meter-phase", data.project.currentPhase);
+  setText("meter-status", data.project.status);
   setText("record-start", fmt(data.project.recordStart));
   setText("contract-end", fmt(data.project.contractEnd));
   setText("last-activity", fmt(data.project.lastActivity));
