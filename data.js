@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-20",
-    lastActivity: "2026-08-20",
-    updatedAt: "2026-08-20T10:45:00+09:00",
-    status: "8月20日 下塗り",
-    currentPhase: "下塗り再開",
-    sourceFiles: 28,
+    asOf: "2026-08-21",
+    lastActivity: "2026-08-21",
+    updatedAt: "2026-08-22T13:17:15+09:00",
+    status: "8月21日 下塗り",
+    currentPhase: "塗装下塗り",
+    sourceFiles: 29,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は現地からの連絡により移動日、8月20日は予定を変更して下塗りを再開したことを確認しました。8月21日から23日は、現地連絡に基づく下塗り予定で、実施確認後に実績へ更新します。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は現地からの連絡により移動日、8月20日と21日は予定を変更して下塗りを実施したことを確認しました。8月22日から23日は現地連絡に基づく下塗り予定、8月24日以降は週報に基づく中塗り、上塗り、シーリングの予定です。"
   },
   materials: [
     {
@@ -200,10 +200,14 @@ window.PROGRESS_DATA = {
     { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "paused", label: "実施後休工", summary: "8月10日、12日、13日に実施。8月11日は雨天休工、8月14日から休工" },
     { id: "paint-arrival-wait", name: "塗料入荷待ち・休工", start: "2026-08-14", end: "2026-08-18", status: "paused", label: "休工実施", summary: "8月14日から18日まで休工を確認" },
     { id: "travel-resume", name: "移動日", start: "2026-08-19", end: "2026-08-19", status: "completed", label: "実施済み", summary: "現地からの連絡により移動を確認" },
-    { id: "painting-resumed", name: "塗装下塗り再開", start: "2026-08-20", end: "2026-08-20", status: "in-progress", label: "実施中", summary: "8月20日に予定を変更して下塗りを再開" },
-    { id: "painting-next-plan", name: "塗装下塗り", start: "2026-08-21", end: "2026-08-23", status: "planned", label: "予定", summary: "現地連絡に基づく下塗り予定" }
+    { id: "painting-resumed", name: "塗装下塗り再開", start: "2026-08-20", end: "2026-08-21", status: "in-progress", label: "実施中", summary: "8月20日から21日に予定を変更して下塗りを実施" },
+    { id: "painting-next-plan", name: "塗装下塗り", start: "2026-08-22", end: "2026-08-23", status: "planned", label: "予定", summary: "現地連絡に基づく下塗り予定" },
+    { id: "painting-middle-plan", name: "塗装中塗り", start: "2026-08-24", end: "2026-08-25", status: "planned", label: "予定", summary: "週報に基づく中塗り予定" },
+    { id: "painting-top-plan", name: "塗装上塗り", start: "2026-08-26", end: "2026-08-28", status: "planned", label: "予定", summary: "週報に基づく上塗り予定" },
+    { id: "sealing-plan", name: "シーリング", start: "2026-08-29", end: "2026-08-30", status: "planned", label: "予定", summary: "週報に基づくシーリング予定" }
   ],
   recent: [
+    { date: "2026-08-21", planned: "休工予定（塗料入荷次第再開）", actual: "下塗り", weather: "曇り", status: "in-progress" },
     { date: "2026-08-20", planned: "休工予定（塗料入荷次第再開）", actual: "下塗り", weather: "曇り", status: "in-progress" },
     { date: "2026-08-19", planned: "休工予定（塗料入荷次第再開）", actual: "移動日", weather: "—", status: "completed" },
     { date: "2026-08-18", planned: "休工予定（塗料入荷次第再開）", actual: "休工", weather: "—", status: "paused" },
@@ -250,9 +254,15 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-08-21", work: "下塗り（予定）", note: "現地連絡による予定" },
     { date: "2026-08-22", work: "下塗り（予定）", note: "現地連絡による予定" },
-    { date: "2026-08-23", work: "下塗り（予定）", note: "現地連絡による予定" }
+    { date: "2026-08-23", work: "下塗り（予定）", note: "現地連絡による予定" },
+    { date: "2026-08-24", work: "中塗り", note: "週報予定" },
+    { date: "2026-08-25", work: "中塗り", note: "週報予定" },
+    { date: "2026-08-26", work: "上塗り", note: "週報予定" },
+    { date: "2026-08-27", work: "上塗り", note: "週報予定" },
+    { date: "2026-08-28", work: "上塗り", note: "週報予定" },
+    { date: "2026-08-29", work: "シーリング", note: "週報予定" },
+    { date: "2026-08-30", work: "シーリング", note: "週報予定" }
   ],
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
@@ -271,7 +281,8 @@ window.PROGRESS_DATA = {
     { date: "2026-08-05", phase: "塗装工", title: "錆止め塗装の開始", description: "ケレンと拭き取りを終えた鉄部へ錆止め塗料を塗布し、塗装工程を進めました。", image: "gallery/2026-08-05-rust-preventive-paint.jpg", alt: "ケレン後の灯台鉄部へ刷毛で錆止め塗料を塗布する状況" },
     { date: "2026-08-06", phase: "塗装工", title: "白色下塗りの進行", description: "養生後、灯台鉄部へ白色の下塗りを行い、塗装工程を進めました。", image: "gallery/2026-08-06-white-primer.jpg", alt: "白色の下塗りを終えた灯台鉄部の梁と斜材" },
     { date: "2026-08-10", phase: "塗装工", title: "錆止め箇所の確認", description: "鋼管接合部の錆止め処理後の状態を記録しました。", image: "gallery/2026-08-10-rust-preventive-detail.jpg", alt: "錆止め処理を施した灯台鋼管の接合部と工事黒板" },
-    { date: "2026-08-13", phase: "塗装工", title: "FRP部の下塗り2回目", description: "FRP部へ下塗り材（RIS211E）を2回塗りした施工状況を記録しました。", image: "gallery/2026-08-13-frp-primer-second-coat.jpg", alt: "下塗り材を2回塗りした灯台FRP部の柱脚と工事黒板" }
+    { date: "2026-08-13", phase: "塗装工", title: "FRP部の下塗り2回目", description: "FRP部へ下塗り材（RIS211E）を2回塗りした施工状況を記録しました。", image: "gallery/2026-08-13-frp-primer-second-coat.jpg", alt: "下塗り材を2回塗りした灯台FRP部の柱脚と工事黒板" },
+    { date: "2026-08-21", phase: "塗装工", title: "白色下塗りの進捗", description: "灯台鉄部への白色下塗りを進め、広い範囲の施工状態を確認しました。", image: "gallery/2026-08-21-white-primer-progress.jpg", alt: "白色の下塗りが進んだ灯台鉄部と周囲の作業用足場" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -316,7 +327,10 @@ window.PROGRESS_DATA = {
     { start: "2026-08-13", end: "2026-08-13", label: "FRP部分ケレン", status: "in-progress" },
     { start: "2026-08-14", end: "2026-08-18", label: "休工", status: "paused" },
     { start: "2026-08-19", end: "2026-08-19", label: "移動日", status: "completed" },
-    { start: "2026-08-20", end: "2026-08-20", label: "下塗り", status: "in-progress" },
-    { start: "2026-08-21", end: "2026-08-23", label: "下塗り（予定）", status: "planned" }
+    { start: "2026-08-20", end: "2026-08-21", label: "下塗り", status: "in-progress" },
+    { start: "2026-08-22", end: "2026-08-23", label: "下塗り（予定）", status: "planned" },
+    { start: "2026-08-24", end: "2026-08-25", label: "中塗り（予定）", status: "planned" },
+    { start: "2026-08-26", end: "2026-08-28", label: "上塗り（予定）", status: "planned" },
+    { start: "2026-08-29", end: "2026-08-30", label: "シーリング（予定）", status: "planned" }
   ]
 };
