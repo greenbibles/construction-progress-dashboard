@@ -57,13 +57,18 @@
   });
 
   data.phases.forEach(phase => {
-    const start = parseDate(phase.start);
-    const end = parseDate(phase.end);
-    const left = Math.max(0, (start - chartStart) / span * 100);
-    const width = Math.min(100 - left, Math.max(1.3, (end - start + DAY) / span * 100));
+    const segments = phase.segments?.length ? phase.segments : [phase];
+    const bars = segments.map(segment => {
+      const start = parseDate(segment.start);
+      const end = parseDate(segment.end);
+      const left = Math.max(0, (start - chartStart) / span * 100);
+      const width = Math.min(100 - left, Math.max(1.3, (end - start + DAY) / span * 100));
+      const title = segment.summary || phase.summary;
+      return `<div class="gantt-bar ${segment.status}" style="left:${left}%;width:${width}%" title="${title}">${segment.label}</div>`;
+    }).join("");
     const row = document.createElement("div");
     row.className = "gantt-row";
-    row.innerHTML = `<div class="gantt-label"><strong>${phase.name}</strong><small>${phase.label} ・ ${phase.start.slice(5).replace("-","/")}–${phase.end.slice(5).replace("-","/")}</small></div><div class="gantt-track"><div class="gantt-bar ${phase.status}" style="left:${left}%;width:${width}%" title="${phase.summary}">${phase.label}</div></div>`;
+    row.innerHTML = `<div class="gantt-label"><strong>${phase.name}</strong><small>${phase.label} ・ ${phase.start.slice(5).replace("-","/")}–${phase.end.slice(5).replace("-","/")}</small></div><div class="gantt-track">${bars}</div>`;
     gantt.appendChild(row);
   });
 
