@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-27",
-    lastActivity: "2026-08-27",
-    updatedAt: "2026-08-28T08:08:25+09:00",
-    status: "8月27日 雨天休工",
-    currentPhase: "塗装工（雨天休工）",
+    asOf: "2026-08-28",
+    lastActivity: "2026-08-28",
+    updatedAt: "2026-08-29T10:00:59+09:00",
+    status: "8月28日 上塗り",
+    currentPhase: "塗装工（上塗り実施）",
     sourceFiles: 30,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングを実施し、8月27日は雨天休工でした。8月28日の上塗りと8月29日から30日のシーリングは週報予定です。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から31日はシーリング、9月1日から2日は検査候補、9月3日から6日は片付けの週報予定です。検査日は週報上でも未確定のため確認中です。"
   },
   materials: [
     {
@@ -204,10 +204,13 @@ window.PROGRESS_DATA = {
     { id: "travel-resume", name: "移動日", start: "2026-08-19", end: "2026-08-19", status: "completed", label: "実施済み", summary: "現地からの連絡により移動を確認" },
     { id: "painting-middle-plan", name: "塗装中塗り", start: "2026-08-24", end: "2026-08-25", status: "completed", label: "実施済み", summary: "8月24日から25日に中塗りを実施" },
     { id: "caulking-progress", name: "FRP・鉄部コーキング", start: "2026-08-26", end: "2026-08-26", status: "completed", label: "実施済み", summary: "予定を変更し、FRP部と鉄部の接合箇所へコーキングを実施" },
-    { id: "painting-top-plan", name: "塗装上塗り", start: "2026-08-28", end: "2026-08-28", status: "planned", label: "予定", summary: "週報に基づく上塗り予定" },
-    { id: "sealing-plan", name: "シーリング", start: "2026-08-29", end: "2026-08-30", status: "planned", label: "予定", summary: "週報に基づくシーリング予定" }
+    { id: "painting-top-progress", name: "塗装上塗り", start: "2026-08-28", end: "2026-08-28", status: "completed", label: "実施済み", summary: "8月28日に上塗りを実施" },
+    { id: "sealing-plan", name: "シーリング", start: "2026-08-29", end: "2026-08-31", status: "planned", label: "予定", summary: "週報に基づくシーリング予定" },
+    { id: "inspection-plan", name: "検査", start: "2026-09-01", end: "2026-09-02", status: "planned", label: "予定（確認中）", summary: "週報では検査候補として記載され、日程は未確定" },
+    { id: "cleanup-plan", name: "片付け", start: "2026-09-03", end: "2026-09-06", status: "planned", label: "予定", summary: "週報に基づく予備・片付け予定" }
   ],
   recent: [
+    { date: "2026-08-28", planned: "上塗り", actual: "上塗り", weather: "曇り", status: "completed" },
     { date: "2026-08-27", planned: "上塗り", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-08-26", planned: "上塗り", actual: "FRP・鉄部のコーキング", weather: "曇り", status: "completed" },
     { date: "2026-08-25", planned: "中塗り", actual: "中塗り", weather: "晴れ", status: "in-progress" },
@@ -261,9 +264,15 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-08-28", work: "上塗り", note: "週報予定" },
     { date: "2026-08-29", work: "シーリング", note: "週報予定" },
-    { date: "2026-08-30", work: "シーリング", note: "週報予定" }
+    { date: "2026-08-30", work: "シーリング", note: "週報予定" },
+    { date: "2026-08-31", work: "シーリング", note: "週報予定" },
+    { date: "2026-09-01", work: "検査候補", note: "週報予定・日程確認中" },
+    { date: "2026-09-02", work: "検査候補", note: "週報予定・日程確認中" },
+    { date: "2026-09-03", work: "予備・片付け", note: "週報予定" },
+    { date: "2026-09-04", work: "予備・片付け", note: "週報予定" },
+    { date: "2026-09-05", work: "予備・片付け", note: "週報予定" },
+    { date: "2026-09-06", work: "予備・片付け", note: "週報予定" }
   ],
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
@@ -334,7 +343,9 @@ window.PROGRESS_DATA = {
     { start: "2026-08-24", end: "2026-08-25", label: "中塗り", status: "completed" },
     { start: "2026-08-26", end: "2026-08-26", label: "FRP・鉄部コーキング", status: "completed" },
     { start: "2026-08-27", end: "2026-08-27", label: "雨天休工", status: "paused" },
-    { start: "2026-08-28", end: "2026-08-28", label: "上塗り（予定）", status: "planned" },
-    { start: "2026-08-29", end: "2026-08-30", label: "シーリング（予定）", status: "planned" }
+    { start: "2026-08-28", end: "2026-08-28", label: "上塗り", status: "completed" },
+    { start: "2026-08-29", end: "2026-08-31", label: "シーリング（予定）", status: "planned" },
+    { start: "2026-09-01", end: "2026-09-02", label: "検査候補（確認中）", status: "planned" },
+    { start: "2026-09-03", end: "2026-09-06", label: "予備・片付け（予定）", status: "planned" }
   ]
 };
