@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-08-31",
-    lastActivity: "2026-08-31",
-    updatedAt: "2026-08-31T15:56:44+09:00",
-    status: "8月31日 移動",
+    asOf: "2026-09-01",
+    lastActivity: "2026-09-01",
+    updatedAt: "2026-09-02T12:25:58+09:00",
+    status: "9月1日 上塗りタッチアップ",
     currentPhase: "仕上げ・検査準備",
     sourceFiles: 30,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングと上塗りを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から30日は休工、8月31日は移動を確認しました。9月1日はシーリング・ボルト交換等、9月2日は検査、9月3日から6日は予備・片付けの予定です。検査合格後は足場解体、灯台付近の清掃、スロープ撤去を予定しています。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングと上塗りを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から30日は休工、8月31日は移動、9月1日は上塗りタッチアップを確認しました。8月月報では9月1日に細部確認・シーリング・ボルト交換等を予定していましたが、更新週報で確認できた実施内容は上塗りタッチアップです。9月2日は検査、9月3日から6日は予備・片付けの予定です。検査合格後は足場解体、灯台付近の清掃、スロープ撤去を予定しています。"
   },
   materials: [
     {
@@ -204,16 +204,17 @@ window.PROGRESS_DATA = {
     { id: "travel-resume", name: "移動日", start: "2026-08-19", end: "2026-08-19", status: "completed", label: "実施済み", summary: "現地からの連絡により移動を確認" },
     { id: "painting-middle-plan", name: "塗装中塗り", start: "2026-08-24", end: "2026-08-25", status: "completed", label: "実施済み", summary: "8月24日から25日に中塗りを実施" },
     { id: "caulking-progress", name: "FRP・鉄部コーキング", start: "2026-08-26", end: "2026-08-26", status: "completed", label: "実施済み", summary: "予定を変更し、FRP部と鉄部の接合箇所へコーキングを実施" },
-    { id: "painting-top-progress", name: "塗装上塗り", start: "2026-08-26", end: "2026-08-28", status: "completed", label: "実施済み", summary: "8月26日と28日に上塗りを実施し、塗装作業を完了", segments: [
+    { id: "painting-top-progress", name: "塗装上塗り", start: "2026-08-26", end: "2026-09-01", status: "completed", label: "実施済み", summary: "8月26日と28日に上塗り、9月1日にタッチアップを実施", segments: [
       { start: "2026-08-26", end: "2026-08-26", status: "completed", label: "実施", summary: "コーキングと上塗りを実施" },
-      { start: "2026-08-28", end: "2026-08-28", status: "completed", label: "実施", summary: "上塗りを実施" }
+      { start: "2026-08-28", end: "2026-08-28", status: "completed", label: "実施", summary: "上塗りを実施" },
+      { start: "2026-09-01", end: "2026-09-01", status: "completed", label: "仕上げ", summary: "上塗りタッチアップを実施" }
     ] },
     { id: "finishing-preparation", name: "仕上げ・検査準備", start: "2026-08-31", end: "2026-08-31", status: "completed", label: "移動済み", summary: "仕上げ作業に向けて移動" },
-    { id: "sealing-plan", name: "シーリング・ボルト交換", start: "2026-09-01", end: "2026-09-01", status: "planned", label: "予定", summary: "シーリング施工、ボルト交換等の仕上げ作業を予定" },
     { id: "inspection-plan", name: "検査", start: "2026-09-02", end: "2026-09-02", status: "planned", label: "予定", summary: "月報に基づく検査予定" },
     { id: "cleanup-plan", name: "片付け", start: "2026-09-03", end: "2026-09-06", status: "planned", label: "予定", summary: "検査後の足場解体、清掃、スロープ撤去を含む予備・片付け予定" }
   ],
   recent: [
+    { date: "2026-09-01", planned: "検査候補", actual: "上塗りタッチアップ", weather: "曇りのち晴れ", status: "completed" },
     { date: "2026-08-31", planned: "シーリング", actual: "移動", weather: "晴れ", status: "completed" },
     { date: "2026-08-30", planned: "シーリング", actual: "休工", weather: "曇りのち雨", status: "paused" },
     { date: "2026-08-29", planned: "シーリング", actual: "休工", weather: "雨", status: "paused" },
@@ -271,7 +272,6 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-09-01", work: "シーリング・ボルト交換等", note: "月報・週報予定" },
     { date: "2026-09-02", work: "検査", note: "月報予定" },
     { date: "2026-09-03", work: "予備・片付け", note: "週報予定" },
     { date: "2026-09-04", work: "予備・片付け", note: "週報予定" },
@@ -298,7 +298,8 @@ window.PROGRESS_DATA = {
     { date: "2026-08-13", phase: "塗装工", title: "FRP部の下塗り2回目", description: "FRP部へ下塗り材（RIS211E）を2回塗りした施工状況を記録しました。", image: "gallery/2026-08-13-frp-primer-second-coat.jpg", alt: "下塗り材を2回塗りした灯台FRP部の柱脚と工事黒板" },
     { date: "2026-08-21", phase: "塗装工", title: "白色下塗りの進捗", description: "灯台鉄部への白色下塗りを進め、広い範囲の施工状態を確認しました。", image: "gallery/2026-08-21-white-primer-progress.jpg", alt: "白色の下塗りが進んだ灯台鉄部と周囲の作業用足場" },
     { date: "2026-08-24", phase: "塗装工", title: "赤色中塗りの開始", description: "白色下塗りを終えた灯台鉄部へ赤色の中塗りを行い、塗装工程を進めました。", image: "gallery/2026-08-24-red-intermediate-coat.jpg", alt: "赤色の中塗りが進んだ灯台鉄部の柱と梁および中塗りの工事黒板" },
-    { date: "2026-08-26", phase: "塗装工", title: "接合部のコーキング", description: "FRP部と鉄部の接合箇所へコーキングを行い、隙間を処理しました。", image: "gallery/2026-08-26-caulking-detail.jpg", alt: "赤色中塗り後の灯台柱接合部へコーキングを施工した状態と工事黒板" }
+    { date: "2026-08-26", phase: "塗装工", title: "接合部のコーキング", description: "FRP部と鉄部の接合箇所へコーキングを行い、隙間を処理しました。", image: "gallery/2026-08-26-caulking-detail.jpg", alt: "赤色中塗り後の灯台柱接合部へコーキングを施工した状態と工事黒板" },
+    { date: "2026-09-01", phase: "塗装工", title: "上塗り仕上げの確認", description: "上塗り後の細部をタッチアップし、赤色に仕上がった灯台鉄部の全体状態を確認しました。", image: "gallery/2026-09-01-topcoat-finish.jpg", alt: "赤色上塗り後の灯台鉄部全景とVフロン上塗りの工事黒板" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -350,7 +351,7 @@ window.PROGRESS_DATA = {
     { start: "2026-08-28", end: "2026-08-28", label: "上塗り", status: "completed" },
     { start: "2026-08-29", end: "2026-08-30", label: "休工", status: "paused" },
     { start: "2026-08-31", end: "2026-08-31", label: "移動", status: "completed" },
-    { start: "2026-09-01", end: "2026-09-01", label: "シーリング・ボルト交換（予定）", status: "planned" },
+    { start: "2026-09-01", end: "2026-09-01", label: "上塗りタッチアップ", status: "completed" },
     { start: "2026-09-02", end: "2026-09-02", label: "検査（予定）", status: "planned" },
     { start: "2026-09-03", end: "2026-09-06", label: "予備・片付け（予定）", status: "planned" }
   ]
