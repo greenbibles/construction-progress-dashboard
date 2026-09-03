@@ -6,9 +6,9 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-09-02",
     lastActivity: "2026-09-02",
-    updatedAt: "2026-09-03T09:53:06+09:00",
+    updatedAt: "2026-09-03T14:10:22+09:00",
     status: "9月2日 簡易検査・指摘箇所直し",
-    currentPhase: "簡易検査・手直し",
+    currentPhase: "検査待ち",
     sourceFiles: 30,
     publicationReady: true,
     note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングと上塗りを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から30日は休工、8月31日は移動、9月1日は上塗りタッチアップ、9月2日は簡易検査と指摘箇所直しを確認しました。9月2日の写真ではボルト交換も確認しています。9月3日から6日は予備・片付けの予定です。検査後は足場解体、灯台付近の清掃、スロープ撤去を予定しています。"
@@ -191,16 +191,16 @@ window.PROGRESS_DATA = {
   phases: [
     { id: "preparation", name: "準備工", start: "2026-03-25", end: "2026-04-27", status: "completed", label: "実施済み", summary: "着工準備、関係機関への説明等" },
     { id: "scaffold", name: "足場設置", start: "2026-04-23", end: "2026-04-24", status: "completed", label: "実施済み", summary: "足場設置を実施" },
-    { id: "surface", name: "下地調整（ケレン）", start: "2026-04-24", end: "2026-05-20", status: "paused", label: "実施後中断", summary: "下地調整と養生まで進行。完了の明記なし" },
-    { id: "pause-restart", name: "工事中断・再開準備", start: "2026-05-25", end: "2026-07-08", status: "paused", label: "中断後再開", summary: "5月25日から中断。7月1日以降に再開準備を行い、7月9日に工事を再開" },
+    { id: "surface", name: "下地調整（ケレン）", start: "2026-04-24", end: "2026-05-20", status: "completed", label: "完了済み", summary: "4月24日から5月20日に下地調整と養生を実施。工事再開後に残工程を進め、後続の塗装工程まで完了" },
+    { id: "pause-restart", name: "工事中断・再開準備", start: "2026-05-25", end: "2026-07-08", status: "completed", label: "再開済み", summary: "5月25日から中断。7月1日以降に再開準備を行い、7月9日に工事を再開" },
     { id: "foundation", name: "基礎工", start: "2026-07-09", end: "2026-07-31", status: "completed", label: "実施済み", summary: "はつり、鉄筋組立、型枠・モルタル打設、モルタル仕上げを実施" },
     { id: "surface-protection", name: "ケレン・養生・拭き取り", start: "2026-08-03", end: "2026-08-05", status: "completed", label: "実施済み", summary: "8月3日から4日にケレン・養生、8月5日にケレン・拭き取りを実施" },
     { id: "painting-primer", name: "塗装下塗り", start: "2026-08-05", end: "2026-08-23", status: "completed", label: "実施済み", summary: "8月5日から下塗りを開始。休工後、8月20日から23日に再開・実施", segments: [
       { start: "2026-08-05", end: "2026-08-07", status: "completed", label: "実施", summary: "8月5日に錆止め塗装、8月6日に養生・下塗り、8月7日に下塗りを実施" },
       { start: "2026-08-20", end: "2026-08-23", status: "completed", label: "再開・実施", summary: "8月20日から23日に下塗りを実施" }
     ] },
-    { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "paused", label: "実施後休工", summary: "8月10日、12日、13日に実施。8月11日は雨天休工、8月14日から休工" },
-    { id: "paint-arrival-wait", name: "塗料入荷待ち・休工", start: "2026-08-14", end: "2026-08-18", status: "paused", label: "休工実施", summary: "8月14日から18日まで休工を確認" },
+    { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "completed", label: "完了済み", summary: "8月10日、12日、13日に実施。雨天休工と塗料待ちを経て、下塗り工程へ移行" },
+    { id: "paint-arrival-wait", name: "塗料入荷待ち・休工", start: "2026-08-14", end: "2026-08-18", status: "completed", label: "再開済み", summary: "8月14日から18日まで休工し、8月20日に下塗りを再開" },
     { id: "travel-resume", name: "移動日", start: "2026-08-19", end: "2026-08-19", status: "completed", label: "実施済み", summary: "現地からの連絡により移動を確認" },
     { id: "painting-middle-plan", name: "塗装中塗り", start: "2026-08-24", end: "2026-08-25", status: "completed", label: "実施済み", summary: "8月24日から25日に中塗りを実施" },
     { id: "caulking-progress", name: "FRP・鉄部コーキング", start: "2026-08-26", end: "2026-08-26", status: "completed", label: "実施済み", summary: "予定を変更し、FRP部と鉄部の接合箇所へコーキングを実施" },
