@@ -4,14 +4,14 @@ window.PROGRESS_DATA = {
     contractStart: null,
     contractEnd: "2026-09-30",
     recordStart: "2026-03-25",
-    asOf: "2026-09-02",
-    lastActivity: "2026-09-02",
-    updatedAt: "2026-09-03T14:10:22+09:00",
-    status: "9月2日 簡易検査・指摘箇所直し",
-    currentPhase: "検査待ち",
-    sourceFiles: 30,
+    asOf: "2026-09-07",
+    lastActivity: "2026-09-07",
+    updatedAt: "2026-09-07T13:21:00+09:00",
+    status: "9月7日 移動（仕上げ・片付け工程）",
+    currentPhase: "仕上げ・片付け",
+    sourceFiles: 31,
     publicationReady: true,
-    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングと上塗りを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から30日は休工、8月31日は移動、9月1日は上塗りタッチアップ、9月2日は簡易検査と指摘箇所直しを確認しました。9月2日の写真ではボルト交換も確認しています。9月3日から6日は予備・片付けの予定です。検査後は足場解体、灯台付近の清掃、スロープ撤去を予定しています。"
+    note: "履行期限は2026年9月30日です。施工計画書を未確認のため、基準工程と契約上の進捗率は確認待ちです。7月18日から7月19日、8月1日から2日は週報の実施欄が未記入のため確認待ちです。8月3日から4日はケレン・養生、8月5日はケレン・拭き取りと錆止め塗装、8月6日は養生・下塗り、8月7日は下塗り、8月8日から9日は休工を確認しました。8月10日、12日、13日はFRP部分ケレン、8月11日は雨天休工、8月14日から18日は休工を確認し、8月13日の写真ではFRP部の下塗り2回目も確認しました。8月19日は移動日、8月20日から23日は下塗り、8月24日から25日は中塗りを確認しました。8月26日は予定を変更してFRP・鉄部のコーキングと上塗りを実施し、8月27日は雨天休工、8月28日は上塗りを実施しました。8月29日から30日は休工、8月31日は移動、9月1日は上塗りタッチアップ、9月2日は簡易検査と指摘箇所直しを確認しました。更新週報で9月2日のボルト交換、9月3日の休工、9月4日の足場一部解体・指摘箇所手直し、9月5日の配線手直し・タッチアップ、9月6日の休工、9月7日の移動を確認しました。9月5日の写真でも灯台周囲の足場解体と資材搬出を確認しています。9月8日から9日は一部シーリング・清掃、9月10日から13日は予備日の予定です。検査合格や工事全体の完了、周辺仮設・スロープの撤去完了は未確認です。"
   },
   materials: [
     {
@@ -211,9 +211,18 @@ window.PROGRESS_DATA = {
     ] },
     { id: "finishing-preparation", name: "仕上げ・検査準備", start: "2026-08-31", end: "2026-08-31", status: "completed", label: "移動済み", summary: "仕上げ作業に向けて移動" },
     { id: "inspection-correction", name: "簡易検査・手直し", start: "2026-09-02", end: "2026-09-02", status: "completed", label: "実施済み", summary: "簡易検査と指摘箇所直しを実施し、写真でボルト交換を確認" },
-    { id: "cleanup-plan", name: "片付け", start: "2026-09-03", end: "2026-09-06", status: "planned", label: "予定", summary: "検査後の足場解体、清掃、スロープ撤去を含む予備・片付け予定" }
+    { id: "finishing-corrections", name: "指摘箇所・配線手直し", start: "2026-09-04", end: "2026-09-05", status: "completed", label: "実施済み", summary: "9月4日に指摘箇所手直し、9月5日に配線手直し・タッチアップを実施" },
+    { id: "scaffold-removal", name: "足場解体", start: "2026-09-04", end: "2026-09-05", status: "completed", label: "実施済み", summary: "9月4日の一部解体を週報で確認。9月5日の写真で灯台周囲の足場撤去と資材搬出を確認。周辺の仮設は残存" },
+    { id: "finishing-travel", name: "移動日", start: "2026-09-07", end: "2026-09-07", status: "completed", label: "実施済み", summary: "仕上げ・片付け工程に向けて移動" },
+    { id: "cleanup-plan", name: "一部シーリング・清掃", start: "2026-09-08", end: "2026-09-09", status: "planned", label: "予定", summary: "週報の9月7日実施欄が移動へ更新されたため、残る9月8日・9日を予定として表示" },
+    { id: "reserve-plan", name: "予備日", start: "2026-09-10", end: "2026-09-13", status: "planned", label: "予定", summary: "週報の予備日。実施内容は確認後に反映" }
   ],
   recent: [
+    { date: "2026-09-07", planned: "一部シーリング・清掃", actual: "移動", weather: "雨", status: "completed" },
+    { date: "2026-09-06", planned: "予備・片付け", actual: "休工", weather: "—", status: "paused" },
+    { date: "2026-09-05", planned: "予備・片付け", actual: "配線手直し・タッチアップ・足場解体（写真確認）", weather: "晴れ", status: "completed" },
+    { date: "2026-09-04", planned: "予備・片付け", actual: "足場解体（一部）・指摘箇所手直し", weather: "晴れ", status: "completed" },
+    { date: "2026-09-03", planned: "予備・片付け", actual: "休工", weather: "雨", status: "paused" },
     { date: "2026-09-02", planned: "検査", actual: "簡易検査・指摘箇所直し・ボルト交換", weather: "曇り時々雨", status: "completed" },
     { date: "2026-09-01", planned: "検査候補", actual: "上塗りタッチアップ", weather: "曇りのち晴れ", status: "completed" },
     { date: "2026-08-31", planned: "シーリング", actual: "移動", weather: "晴れ", status: "completed" },
@@ -273,10 +282,12 @@ window.PROGRESS_DATA = {
     { date: "2026-06-25", planned: "休工", actual: "現場確認", weather: "曇り", status: "completed" }
   ],
   upcoming: [
-    { date: "2026-09-03", work: "予備・片付け", note: "週報予定" },
-    { date: "2026-09-04", work: "予備・片付け", note: "週報予定" },
-    { date: "2026-09-05", work: "予備・片付け", note: "週報予定" },
-    { date: "2026-09-06", work: "予備・片付け", note: "週報予定" }
+    { date: "2026-09-08", work: "一部シーリング・清掃", note: "週報予定" },
+    { date: "2026-09-09", work: "一部シーリング・清掃", note: "週報予定" },
+    { date: "2026-09-10", work: "予備日", note: "週報予定" },
+    { date: "2026-09-11", work: "予備日", note: "週報予定" },
+    { date: "2026-09-12", work: "予備日", note: "週報予定" },
+    { date: "2026-09-13", work: "予備日", note: "週報予定" }
   ],
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
@@ -300,7 +311,9 @@ window.PROGRESS_DATA = {
     { date: "2026-08-24", phase: "塗装工", title: "赤色中塗りの開始", description: "白色下塗りを終えた灯台鉄部へ赤色の中塗りを行い、塗装工程を進めました。", image: "gallery/2026-08-24-red-intermediate-coat.jpg", alt: "赤色の中塗りが進んだ灯台鉄部の柱と梁および中塗りの工事黒板" },
     { date: "2026-08-26", phase: "塗装工", title: "接合部のコーキング", description: "FRP部と鉄部の接合箇所へコーキングを行い、隙間を処理しました。", image: "gallery/2026-08-26-caulking-detail.jpg", alt: "赤色中塗り後の灯台柱接合部へコーキングを施工した状態と工事黒板" },
     { date: "2026-09-01", phase: "塗装工", title: "上塗り仕上げの確認", description: "上塗り後の細部をタッチアップし、赤色に仕上がった灯台鉄部の全体状態を確認しました。", image: "gallery/2026-09-01-topcoat-finish.jpg", alt: "赤色上塗り後の灯台鉄部全景とVフロン上塗りの工事黒板" },
-    { date: "2026-09-02", phase: "仕上げ工", title: "ボルト交換の完了", description: "灯台上部接合部のボルトを交換し、交換後の取付状態を確認しました。", image: "gallery/2026-09-02-bolt-replacement.jpg", alt: "赤色に仕上がった灯台上部接合部の交換済みボルトとボルト交換完了の工事黒板" }
+    { date: "2026-09-02", phase: "仕上げ工", title: "ボルト交換の完了", description: "灯台上部接合部のボルトを交換し、交換後の取付状態を確認しました。", image: "gallery/2026-09-02-bolt-replacement.jpg", alt: "赤色に仕上がった灯台上部接合部の交換済みボルトとボルト交換完了の工事黒板" },
+    { date: "2026-09-04", phase: "仕上げ工", title: "指摘箇所の塗装手直し", description: "簡易検査で指摘された箇所の手直しを進め、網状の足元部分などの上塗りタッチアップを行いました。", image: "gallery/2026-09-04-paint-touchup.jpg", alt: "赤色の上塗りタッチアップを行った灯台の網状部分と手直しの工事黒板" },
+    { date: "2026-09-05", phase: "仮設工事", title: "足場解体後の灯台全景", description: "灯台周囲の足場解体が進み、赤色に仕上がった鉄部全景が見える状態になりました。周辺の仮設や養生は残っており、シーリング・清掃を予定しています。", image: "gallery/2026-09-05-scaffold-removal.jpg", alt: "灯台周囲の足場を解体した後の赤色の灯台全景と、残る周辺仮設・基礎の養生" }
   ],
   calendarRanges: [
     { start: "2026-03-25", end: "2026-04-22", label: "準備工", status: "completed" },
@@ -354,6 +367,12 @@ window.PROGRESS_DATA = {
     { start: "2026-08-31", end: "2026-08-31", label: "移動", status: "completed" },
     { start: "2026-09-01", end: "2026-09-01", label: "上塗りタッチアップ", status: "completed" },
     { start: "2026-09-02", end: "2026-09-02", label: "簡易検査・指摘箇所直し", status: "completed" },
-    { start: "2026-09-03", end: "2026-09-06", label: "予備・片付け（予定）", status: "planned" }
+    { start: "2026-09-03", end: "2026-09-03", label: "休工", status: "paused" },
+    { start: "2026-09-04", end: "2026-09-04", label: "足場一部解体・手直し", status: "completed" },
+    { start: "2026-09-05", end: "2026-09-05", label: "配線手直し・タッチアップ・足場解体", status: "completed" },
+    { start: "2026-09-06", end: "2026-09-06", label: "休工", status: "paused" },
+    { start: "2026-09-07", end: "2026-09-07", label: "移動", status: "completed" },
+    { start: "2026-09-08", end: "2026-09-09", label: "一部シーリング・清掃（予定）", status: "planned" },
+    { start: "2026-09-10", end: "2026-09-13", label: "予備日（予定）", status: "planned" }
   ]
 };
