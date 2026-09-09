@@ -39,7 +39,7 @@
     scaleMonths.push(new Date(month));
   }
   const monthCount = Math.max(1, scaleMonths.length);
-  const monthMinWidth = 96;
+  const monthMinWidth = 160;
   ganttViewport.style.setProperty("--gantt-month-count", String(monthCount));
   ganttViewport.style.setProperty("--gantt-track-min-width", `${monthCount * monthMinWidth}px`);
   ganttScale.style.gridTemplateColumns = `var(--gantt-label-width) repeat(${monthCount}, minmax(${monthMinWidth}px, 1fr))`;
@@ -70,6 +70,10 @@
     row.className = "gantt-row";
     row.innerHTML = `<div class="gantt-label"><strong>${phase.name}</strong><small>${phase.label} ・ ${phase.start.slice(5).replace("-","/")}–${phase.end.slice(5).replace("-","/")}</small></div><div class="gantt-track">${bars}</div>`;
     gantt.appendChild(row);
+  });
+  requestAnimationFrame(() => {
+    ganttViewport.scrollLeft = ganttViewport.scrollWidth - ganttViewport.clientWidth;
+    ganttViewport.scrollTop = ganttViewport.scrollHeight - ganttViewport.clientHeight;
   });
 
   const galleryItems = data.gallery || [];

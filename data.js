@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-09-08",
     lastActivity: "2026-09-08",
-    updatedAt: "2026-09-09T10:05:45+09:00",
+    updatedAt: "2026-09-09T10:39:39+09:00",
     status: "9月8日 休工（仕上げ・片付け工程）",
     currentPhase: "仕上げ・片付け",
     sourceFiles: 31,
@@ -215,7 +215,9 @@ window.PROGRESS_DATA = {
     { id: "scaffold-removal", name: "足場解体", start: "2026-09-04", end: "2026-09-05", status: "completed", label: "実施済み", summary: "9月4日の一部解体を週報で確認。9月5日の写真で灯台周囲の足場撤去と資材搬出を確認。周辺の仮設は残存" },
     { id: "finishing-travel", name: "移動日", start: "2026-09-07", end: "2026-09-07", status: "completed", label: "実施済み", summary: "仕上げ・片付け工程に向けて移動" },
     { id: "cleanup-plan", name: "一部シーリング・清掃", start: "2026-09-09", end: "2026-09-09", status: "planned", label: "予定", summary: "9月8日は雨天休工を確認。9月9日は週報予定として表示" },
-    { id: "reserve-plan", name: "予備日", start: "2026-09-10", end: "2026-09-13", status: "planned", label: "予定", summary: "週報の予備日。実施内容は確認後に反映" }
+    { id: "reserve-plan", name: "予備日", start: "2026-09-10", end: "2026-09-13", status: "planned", label: "予定", summary: "週報の予備日。実施内容は確認後に反映" },
+    { id: "completion-documents", name: "完成書類確認", start: "2026-09-11", end: "2026-09-18", status: "planned", label: "予定", summary: "9月11日にパイロット版完成書類を提出。整備課確認後、9月18日にチェックバック予定。修正がなければ書類検査完了" },
+    { id: "completion-inspection", name: "工事完了検査", start: "2026-09-25", end: "2026-09-25", status: "planned", label: "予定", summary: "9月25日10:00から現場検査予定。指摘時は是正・再確認を行い、完成書類の電子媒体格納と竣工書類納品後に終了" }
   ],
   recent: [
     { date: "2026-09-08", planned: "一部シーリング・清掃", actual: "休工", weather: "雨", status: "paused" },
@@ -285,9 +287,11 @@ window.PROGRESS_DATA = {
   upcoming: [
     { date: "2026-09-09", work: "一部シーリング・清掃", note: "週報予定" },
     { date: "2026-09-10", work: "予備日", note: "週報予定" },
-    { date: "2026-09-11", work: "予備日", note: "週報予定" },
+    { date: "2026-09-11", work: "予備日／パイロット版完成書類提出", note: "週報予定・官側連絡" },
     { date: "2026-09-12", work: "予備日", note: "週報予定" },
-    { date: "2026-09-13", work: "予備日", note: "週報予定" }
+    { date: "2026-09-13", work: "予備日", note: "週報予定" },
+    { date: "2026-09-18", work: "書類チェックバック", note: "修正がなければ書類検査完了" },
+    { date: "2026-09-25", work: "工事完了検査（現場）", note: "10:00開始予定" }
   ],
   gallery: [
     { date: "2026-03-30", phase: "着工前", title: "施工前の現況", description: "作業開始前の灯台本体と基礎、鉄部の状態を記録しました。", image: "gallery/2026-03-30-lighthouse-close.jpg", alt: "着工前の灯台鉄塔と基礎を正面から見た全景" },
@@ -374,6 +378,9 @@ window.PROGRESS_DATA = {
     { start: "2026-09-07", end: "2026-09-07", label: "移動", status: "completed" },
     { start: "2026-09-08", end: "2026-09-08", label: "雨天休工", status: "paused" },
     { start: "2026-09-09", end: "2026-09-09", label: "一部シーリング・清掃（予定）", status: "planned" },
-    { start: "2026-09-10", end: "2026-09-13", label: "予備日（予定）", status: "planned" }
+    { start: "2026-09-10", end: "2026-09-13", label: "予備日（予定）", status: "planned" },
+    { start: "2026-09-11", end: "2026-09-11", label: "完成書類パイロット版提出（予定）", status: "planned" },
+    { start: "2026-09-18", end: "2026-09-18", label: "書類チェックバック（予定）", status: "planned" },
+    { start: "2026-09-25", end: "2026-09-25", label: "工事完了検査 10:00（予定）", status: "planned" }
   ]
 };
