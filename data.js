@@ -6,7 +6,7 @@ window.PROGRESS_DATA = {
     recordStart: "2026-03-25",
     asOf: "2026-09-10",
     lastActivity: "2026-09-10",
-    updatedAt: "2026-09-10T11:40:20+09:00",
+    updatedAt: "2026-09-10T14:34:47+09:00",
     status: "9月10日 シーリング・片付け実施",
     currentPhase: "仕上げ・片付け",
     sourceFiles: 31,
@@ -200,8 +200,6 @@ window.PROGRESS_DATA = {
       { start: "2026-08-20", end: "2026-08-23", status: "completed", label: "再開・実施", summary: "8月20日から23日に下塗りを実施" }
     ] },
     { id: "frp-preparation", name: "FRP部分ケレン", start: "2026-08-10", end: "2026-08-13", status: "completed", label: "完了済み", summary: "8月10日、12日、13日に実施。雨天休工と塗料待ちを経て、下塗り工程へ移行" },
-    { id: "paint-arrival-wait", name: "塗料入荷待ち・休工", start: "2026-08-14", end: "2026-08-18", status: "completed", label: "再開済み", summary: "8月14日から18日まで休工し、8月20日に下塗りを再開" },
-    { id: "travel-resume", name: "移動日", start: "2026-08-19", end: "2026-08-19", status: "completed", label: "実施済み", summary: "現地からの連絡により移動を確認" },
     { id: "painting-middle-plan", name: "塗装中塗り", start: "2026-08-24", end: "2026-08-25", status: "completed", label: "実施済み", summary: "8月24日から25日に中塗りを実施" },
     { id: "caulking-progress", name: "FRP・鉄部コーキング", start: "2026-08-26", end: "2026-08-26", status: "completed", label: "実施済み", summary: "予定を変更し、FRP部と鉄部の接合箇所へコーキングを実施" },
     { id: "painting-top-progress", name: "塗装上塗り", start: "2026-08-26", end: "2026-09-01", status: "completed", label: "実施済み", summary: "8月26日と28日に上塗り、9月1日にタッチアップを実施", segments: [
@@ -209,16 +207,13 @@ window.PROGRESS_DATA = {
       { start: "2026-08-28", end: "2026-08-28", status: "completed", label: "実施", summary: "上塗りを実施" },
       { start: "2026-09-01", end: "2026-09-01", status: "completed", label: "仕上げ", summary: "上塗りタッチアップを実施" }
     ] },
-    { id: "finishing-preparation", name: "仕上げ・検査準備", start: "2026-08-31", end: "2026-08-31", status: "completed", label: "移動済み", summary: "仕上げ作業に向けて移動" },
     { id: "inspection-correction", name: "簡易検査・手直し", start: "2026-09-02", end: "2026-09-02", status: "completed", label: "実施済み", summary: "簡易検査と指摘箇所直しを実施し、写真でボルト交換を確認" },
     { id: "finishing-corrections", name: "指摘箇所・配線手直し", start: "2026-09-04", end: "2026-09-05", status: "completed", label: "実施済み", summary: "9月4日に指摘箇所手直し、9月5日に配線手直し・タッチアップを実施" },
     { id: "scaffold-removal", name: "足場解体", start: "2026-09-04", end: "2026-09-05", status: "completed", label: "実施済み", summary: "9月4日の一部解体を週報で確認。9月5日の写真で灯台周囲の足場撤去と資材搬出を確認。周辺の仮設は残存" },
-    { id: "finishing-travel", name: "移動日", start: "2026-09-07", end: "2026-09-07", status: "completed", label: "実施済み", summary: "仕上げ・片付け工程に向けて移動" },
     { id: "cleanup-progress", name: "シーリング・片付け", start: "2026-09-09", end: "2026-09-10", status: "completed", label: "実施済み", summary: "9月9日は雨天休工、9月10日にシーリング・片付けを実施", segments: [
       { start: "2026-09-09", end: "2026-09-09", status: "paused", label: "雨天休工", summary: "雨天のため休工" },
       { start: "2026-09-10", end: "2026-09-10", status: "completed", label: "実施", summary: "シーリング・片付けを実施" }
     ] },
-    { id: "reserve-plan", name: "予備日", start: "2026-09-11", end: "2026-09-13", status: "planned", label: "予定", summary: "週報の予備日。実施内容は確認後に反映" },
     { id: "completion-documents", name: "完成書類確認", start: "2026-09-11", end: "2026-09-18", status: "planned", label: "予定", summary: "9月11日にパイロット版完成書類を提出。整備課確認後、9月18日にチェックバック予定。修正がなければ書類検査完了" },
     { id: "completion-inspection", name: "工事完了検査", start: "2026-09-25", end: "2026-09-25", status: "planned", label: "予定", summary: "9月25日10:00から現場検査予定。指摘時は是正・再確認を行い、完成書類の電子媒体格納と竣工書類納品後に終了" }
   ],
