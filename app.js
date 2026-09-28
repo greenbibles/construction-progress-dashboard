@@ -135,7 +135,8 @@
     galleryTabs.appendChild(button);
   });
   if (galleryItems.length) {
-    selectPhoto(0);
+    selectPhoto(galleryItems.length - 1);
+    requestAnimationFrame(() => { galleryTabs.scrollLeft = galleryTabs.scrollWidth; });
     galleryMain.addEventListener("click", () => openPhoto(galleryItems[selectedPhoto]));
     galleryPrev.addEventListener("click", () => selectPhoto(selectedPhoto - 1));
     galleryNext.addEventListener("click", () => selectPhoto(selectedPhoto + 1));
@@ -229,7 +230,10 @@
   window.addEventListener("resize", syncRecentLogHeight);
 
   const upcoming = document.getElementById("upcoming-log");
-  (data.upcoming || []).forEach(item => {
+  const upcomingItems = data.upcoming || [];
+  const upcomingSection = document.getElementById("upcoming-section");
+  if (!upcomingItems.length && upcomingSection) upcomingSection.hidden = true;
+  upcomingItems.forEach(item => {
     const el = document.createElement("div");
     el.className = "upcoming-item";
     el.innerHTML = `<div class="upcoming-date">${fmtShortWithWeekday(item.date)}</div><div><strong>${item.work}</strong><small>${item.note}</small></div>`;

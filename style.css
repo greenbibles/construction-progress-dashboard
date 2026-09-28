@@ -74,4 +74,5 @@
 @media(max-width:540px){.gantt-wrap{padding:18px 14px}.gantt-viewport{--gantt-label-width:174px}}
 @media(max-width:540px){.calendar-nav button,.photo-controls button{min-height:45px}.gantt-label strong{overflow:visible;white-space:normal;text-overflow:clip;line-height:1.35}}
 @media(max-width:540px){.section-head.compact{display:block}.calendar-nav{justify-content:flex-start;margin-top:8px}.calendar-nav span{white-space:nowrap}}
+@media(max-width:540px){.calendar-card{overflow-x:auto;overscroll-behavior-x:contain}.calendar-week,.calendar{min-width:560px}}
 @media(max-width:540px){.operations-wide{left:auto;width:100%;transform:none}}
